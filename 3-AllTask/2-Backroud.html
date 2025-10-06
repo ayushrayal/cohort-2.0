@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Pool</title>
+    <link rel="shortcut icon" href="../Photos/deadpool.jpg" type="image/jpeg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        @font-face {
+            font-family: "Dead Pool";
+            src: url("../Fonts/roguehero3d.ttf");
+        }
+        @font-face {
+            font-family: "deadpool";
+            src: url("../Fonts/rogueherograd.ttf");
+        }
+
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-image: url("../Photos/deadpool2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow-x: hidden;
+        }
+        button{
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            padding: 15px 25px;
+            font-size: 30px;
+            background-color: transparent;
+            color: #B02B40;
+            border: 2px solid #5E0C16;
+            border-radius: 5px;
+            font-family: "deadpool";
+            transition: all 0.3s ease-in-out;
+        }
+        h1{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 10vw;
+            color: #B02B40;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: "Dead Pool", sans-serif;
+            font-weight: 300;
+        }
+        button:hover{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+            color: red;
+        }
+        button:hover i{
+            color: red;
+        }
+        button i{
+            margin-left: 10px;
+            font-family: "deadpool";
+            color: #5E0E18;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/752a5acbb1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Dead Pool</h1>
+         <button><i class="fa-solid fa-gun"></i> Fire me</button>
+    </div>
+</body>
+</html>
