@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Spiderman";
+  src: url("../../Fonts/Spiderman-g2wP.ttf");
+}
+@font-face {
+  font-family: "Daredevil";
+  src: url("../../Fonts/Daredevil.ttf");
+}
+@font-face {
+  font-family: "Deadpool";
+  src: url("../../Fonts/rogueherograd.ttf");
+}
+@font-face {
+  font-family: "Venom";
+  src: url("../../Fonts/VENOM.ttf");
+}
+@font-face {
+  font-family: "Batman";
+  src: url("../../Fonts/batmfo__.ttf");
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 0.1vh;
+}
+main section {
+  height: 100%;
+  flex: 1 1 0;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+main section:hover {
+  flex-grow: 3;
+}
+main section:hover h1, main section:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+main section h1 {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 7vh;
+  letter-spacing: 0.3vh;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 2vh;
+  opacity: 0;
+  transform: translateY(20px);
+}
+main section p {
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out 0.1s;
+  opacity: 0;
+  transform: translateY(20px);
+  max-width: 80%;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+main section:nth-child(1) {
+  background: url("../../Photos/blackspider.jpg") no-repeat center/cover;
+}
+main section:nth-child(1) h1 {
+  font-family: "Spiderman", sans-serif;
+  font-weight: 100;
+  font-size: 11vh;
+}
+main section:nth-child(1) p {
+  content: "The wall-crawling hero with spider-like abilities";
+}
+main section:nth-child(2) {
+  background: url("../../Photos/blackdaredevil.jpg") no-repeat center/cover;
+}
+main section:nth-child(2) h1 {
+  font-family: "Daredevil", sans-serif;
+  font-weight: 100;
+  font-size: 6vh;
+}
+main section:nth-child(2) p {
+  content: "The Man Without Fear, blinded but with enhanced senses";
+}
+main section:nth-child(3) {
+  background: url("../../Photos/deadpoolforscss.jpg") no-repeat center/cover;
+}
+main section:nth-child(3) h1 {
+  font-family: "Deadpool", sans-serif;
+  font-weight: 100;
+  font-size: 11vh;
+}
+main section:nth-child(3) p {
+  content: "The Merc with a Mouth, known for his humor and regeneration";
+}
+main section:nth-child(4) {
+  background: url("../../Photos/blackvenom.jpg") no-repeat center/cover;
+}
+main section:nth-child(4) h1 {
+  font-family: "Venom", sans-serif;
+  font-weight: 100;
+  font-size: 9vh;
+  letter-spacing: 1vh;
+}
+main section:nth-child(4) p {
+  content: "The alien symbiote seeking vengeance and chaos";
+}
+main section:nth-child(5) {
+  background: url("../../Photos/blackbatman.jpg") no-repeat center/cover;
+}
+main section:nth-child(5) h1 {
+  font-family: "Batman", sans-serif;
+  font-weight: 100;
+  font-size: 10vh;
+}
+main section:nth-child(5) p {
+  content: "The Dark Knight protector of Gotham City";
+}/*# sourceMappingURL=style.css.map */
