@@ -20,6 +20,39 @@ main {
   overflow: hidden;
 }
 
+nav {
+  position: absolute;
+  top: 7%;
+  height: 6vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  z-index: 2;
+}
+nav #first-part, nav #second-part, nav #third-part {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav #first-part h3, nav #second-part h3, nav #third-part h3 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav #first-part i, nav #second-part i, nav #third-part i {
+  font-size: 2vw;
+  cursor: pointer;
+}
+nav #first-part h3 {
+  font-weight: 700;
+  font-size: 2vw;
+  background-color: white;
+  color: #C38384;
+  padding: 0.2vw 2.2vw 0.2vw 0.1vw;
+}
+
 h1 {
   position: absolute;
   top: 59%;
@@ -28,6 +61,12 @@ h1 {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+h1:hover {
+  transform: perspective(600px) rotateY(-12deg) scale(1.04) translate3d(0, -10px, 30px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 main > img {
@@ -58,6 +97,14 @@ main > img {
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.container section:hover {
+  transform: perspective(600px) rotateY(12deg) scale(1.04) translate3d(0, -10px, 30px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  z-index: 2;
 }
 .container section:nth-child(1) {
   padding: 2.5vh;
@@ -85,8 +132,119 @@ main > img {
   font-size: 0.8vw;
 }
 .container section:nth-child(1) .one i {
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 6vh;
+  width: 6vh;
+  font-size: 1.5vw;
+  background-color: rgba(161, 58, 58, 0.5);
   border-radius: 50%;
-  padding: 10px;
   color: white;
+  border: #C38384 solid 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container section:nth-child(2) {
+  gap: 5px;
+  padding: 2.5vh;
+}
+.container section:nth-child(2) h6 {
+  font-size: 1vw;
+}
+.container section:nth-child(2) h3 {
+  font-size: 2vw;
+}
+.container section:nth-child(2) p {
+  top: 24.6%;
+  left: 49.5%;
+  position: absolute;
+  font-size: 0.8vw;
+}
+.container section:nth-child(2) .img {
+  display: flex;
+  gap: 3vw;
+}
+.container section:nth-child(2) .img img {
+  height: 7vh;
+  width: auto;
+  border-radius: 10px;
+}
+.container section:nth-child(2) i {
+  background-color: #D0A8A8;
+  height: 6vh;
+  width: 6vh;
+  color: white;
+  font-size: 1.5vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container section:nth-child(3) {
+  padding: 2.5vh;
+}
+.container section:nth-child(3) h6 {
+  font-size: 1vw;
+}
+.container section:nth-child(3) h3 {
+  font-size: 2vw;
+}
+.container section:nth-child(3) p {
+  position: absolute;
+  top: 76.5%;
+  left: 5%;
+  font-size: 0.7vw;
+  padding-left: 1.2vh;
+}
+.container section:nth-child(3) img {
+  height: 15vh;
+  width: auto;
+  border-radius: 10px;
+}
+.container section:nth-child(3) .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5vw;
+}
+.container section:nth-child(3) .bottom i {
+  background-color: #D0A8A8;
+  height: 4vh;
+  width: 4vh;
+  color: white;
+  font-size: 1.5vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container section:nth-child(3) .bottom span {
+  font-size: 1vw;
+  font-weight: 500;
+}
+.container section:nth-child(4) {
+  padding: 2vh;
+}
+.container section:nth-child(4) h6 {
+  font-size: 1vw;
+}
+.container section:nth-child(4) p {
+  font-size: 0.7vw;
+}
+.container section:nth-child(4) i {
+  background-color: #DAB5B5;
+  height: 4vh;
+  width: 4vh;
+  color: white;
+  font-size: 1.5vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container section:nth-child(4) span {
+  font-size: 1vw;
+  font-weight: 800;
 }/*# sourceMappingURL=style.css.map */
