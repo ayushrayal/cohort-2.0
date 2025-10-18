@@ -13,4 +13,21 @@ This repository contains all the projects and assignments completed during my jo
 ## About
 This folder is a collection of everything I have learned so far in the Cohort 2.0 batch at Sheryians Coding School. It showcases my progress in web development, from basic HTML to advanced CSS/SCSS and interactive UI effects.
 
+## Lenis — Smooth Scrolling (4-LenisJS/1-BasicScrolling)
+
+A small demo project that demonstrates using the Lenis smooth-scrolling library to create a simple full-page vertical scroll experience. This was built while learning how to integrate third-party JS packages and wire them into a basic page.
+
+What’s included:
+- `index.html` — three full-screen sections that scroll vertically.
+- `style.scss` / `style.css` — minimal styles to make each section full height and centered.
+- `script.js` — initializes Lenis and connects it to requestAnimationFrame for smooth scrolling.
+
+How to run:
+1. Open `4-LenisJS/1-BasicScrolling/index.html` in a browser (no build step required).
+2. The demo loads Lenis from a CDN and starts smooth scrolling automatically.
+
+Notes / Learnings:
+- Using Lenis for smooth scrolling requires calling `lenis.raf(time)` inside a requestAnimationFrame loop.
+- The demo shows how to keep HTML/CSS simple while adding a small JS library to enhance UX.
+
 _This is my journey so far!_
