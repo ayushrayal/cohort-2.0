@@ -138,4 +138,24 @@ section div {
   grid-column: 2;
   grid-row: 3;
   color: #4b4949;
+}
+
+.section-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.section-2 span {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.section-2 p {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: rgb(151, 146, 146);
 }/*# sourceMappingURL=style.css.map */
