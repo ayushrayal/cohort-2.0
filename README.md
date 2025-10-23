@@ -2,6 +2,16 @@
 
 This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
 
+## Progress snapshot (as of 2025-10-23)
+
+- `1-HTML/` — Basic HTML exercises and tags (completed). 
+- `2-SCSS&CSS/` — Multiple responsive and SCSS projects (Hover effects, Dua Lipa demo, FolioBlox hero). Some completed, some work-in-progress on desktop responsiveness.
+- `3-AllTask/` — Collection of task pages: Resume site, background demos, Black Panther video background, and the Noon carousel (Swiper) project.
+- `4-LenisJS/` — Lenis smooth-scrolling demo (fully working).
+- `5-JavaScript/` — New: started JavaScript basics on 2025-10-23. See `5-JavaScript/README.md` for details.
+- `Fonts/` and `Photos/` — Asset folders used across projects.
+
+
 ## What’s inside?
 - **HTML Projects:** Basic to advanced HTML pages, including resume websites and creative layouts.
 - **CSS & SCSS:** Styling with CSS and SCSS, including hover effects, custom fonts, and responsive layouts.
