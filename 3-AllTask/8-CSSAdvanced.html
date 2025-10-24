@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background-clip Property Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+            border: 15px solid rgba(255, 0, 0, 0.5);
+            padding: 20px;
+            margin: 1rem 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px dashed #333;
+            pointer-events: none;
+        }
+
+        .label {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .property-value {
+            color: #81e6d9;
+        }
+
+        .text-clip-demo {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table th {
+            background: #4a5568;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        /* Specific background-clip examples */
+        .border-box {
+            background-clip: border-box;
+        }
+
+        .padding-box {
+            background-clip: padding-box;
+        }
+
+        .content-box {
+            background-clip: content-box;
+        }
+
+        .interactive-demo {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            padding: 0.75rem 1.5rem;
+            background: #4a5568;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #2d3748;
+        }
+
+        .control-btn.active {
+            background: #4299e1;
+        }
+
+        .interactive-box {
+            width: 300px;
+            height: 200px;
+            border: 20px solid rgba(255, 0, 0, 0.5);
+            padding: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS <code>background-clip</code> Property</h1>
+            <p class="subtitle">Learn how to control where backgrounds are displayed</p>
+        </header>
+
+        <div class="demo-section">
+            <h2>What is background-clip?</h2>
+            <p>The <code>background-clip</code> property determines the painting area of the background - it defines whether the background extends under the border, padding, or is restricted to just the content area.</p>
+            
+            <div class="code-block">
+                .element {<br>
+                &nbsp;&nbsp;background-clip: <span class="property-value">border-box | padding-box | content-box | text</span>;<br>
+                }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Visual Examples</h2>
+            <div class="box-container">
+                <div class="box-wrapper">
+                    <div class="box border-box">
+                        <div class="label">border-box (default)</div>
+                        Background extends under border
+                    </div>
+                </div>
+                
+                <div class="box-wrapper">
+                    <div class="box padding-box">
+                        <div class="label">padding-box</div>
+                        Background stops at border
+                    </div>
+                </div>
+                
+                <div class="box-wrapper">
+                    <div class="box content-box">
+                        <div class="label">content-box</div>
+                        Background only in content area
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Text Clipping (Creative Effect)</h2>
+            <div class="text-clip-demo">
+                BACKGROUND-CLIP: TEXT
+            </div>
+            <div class="code-block">
+                .text-element {<br>
+                &nbsp;&nbsp;background: linear-gradient(45deg, #ff6b6b, #4ecdc4);<br>
+                &nbsp;&nbsp;-webkit-background-clip: text;<br>
+                &nbsp;&nbsp;background-clip: text;<br>
+                &nbsp;&nbsp;color: transparent;<br>
+                }
+            </div>
+            <div class="note">
+                <strong>Note:</strong> For text clipping, you need to use <code>-webkit-background-clip: text</code> for better browser support and set <code>color: transparent</code>.
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Property Values Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                        <th>Visual Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>border-box</code></td>
+                        <td>Background extends to the outside edge of the border (default)</td>
+                        <td>Border + Padding + Content</td>
+                    </tr>
+                    <tr>
+                        <td><code>padding-box</code></td>
+                        <td>Background extends to the outside edge of the padding</td>
+                        <td>Padding + Content</td>
+                    </tr>
+                    <tr>
+                        <td><code>content-box</code></td>
+                        <td>Background is painted within the content box only</td>
+                        <td>Content only</td>
+                    </tr>
+                    <tr>
+                        <td><code>text</code></td>
+                        <td>Background is clipped to the foreground text (requires -webkit- prefix)</td>
+                        <td>Text shape only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="interactive-demo">
+            <h2>Interactive Demo</h2>
+            <p>Click the buttons to see how different background-clip values affect the element:</p>
+            
+            <div class="controls">
+                <button class="control-btn active" onclick="changeClip('border-box')">border-box</button>
+                <button class="control-btn" onclick="changeClip('padding-box')">padding-box</button>
+                <button class="control-btn" onclick="changeClip('content-box')">content-box</button>
+            </div>
+            
+            <div class="interactive-box" id="interactiveBox">
+                Interactive Demo Box
+            </div>
+            
+            <div class="code-block" id="currentCode">
+                #interactiveBox {<br>
+                &nbsp;&nbsp;background-clip: border-box;<br>
+                }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Practical Use Cases</h2>
+            <ul style="padding-left: 2rem; line-height: 1.8;">
+                <li><strong>Text effects:</strong> Create gradient or image-filled text</li>
+                <li><strong>Design elements:</strong> Create interesting borders and backgrounds</li>
+                <li><strong>UI components:</strong> Control how backgrounds interact with borders</li>
+                <li><strong>Creative layouts:</strong> Combine with other CSS properties for unique designs</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>CSS background-clip Property Demo | Created for Learning Purpose</p>
+        </footer>
+    </div>
+
+    <script>
+        function changeClip(value) {
+            const box = document.getElementById('interactiveBox');
+            const code = document.getElementById('currentCode');
+            const buttons = document.querySelectorAll('.control-btn');
+            
+            // Update box style
+            box.style.backgroundClip = value;
+            
+            // Update code display
+            code.innerHTML = `#interactiveBox {<br>&nbsp;&nbsp;background-clip: ${value};<br>}`;
+            
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === value) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

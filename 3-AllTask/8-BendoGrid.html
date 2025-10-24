@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bendo Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html{
+            height: 100%;
+            width: 100%;
+        }
+        main{
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 20% 0.5fr 1fr;
+            grid-template-rows: 30% 40% 30%;
+            grid-template-areas: "hero mid-one mid-one right-one"
+                                 "hero mid-two right-two right-two"
+                                 "left-footer right-footer right-footer right-footer";
+        }
+        #hero{
+            grid-area: hero;
+            background-color: lightcoral;
+        }
+        #mid-one{
+            grid-area: mid-one;
+            background-color: lightblue;
+        }
+        #right-one{
+            grid-area: right-one;
+            background-color: lightgreen;
+        }
+        #mid-two{
+            grid-area: mid-two;
+            background-color: lightpink;
+        }
+        #right-two{
+            grid-area: right-two;
+            background-color: lightseagreen;
+        }
+        #left-footer{
+            grid-area: left-footer;
+            background-color: lightgoldenrodyellow;
+        }
+        #right-footer{
+            grid-area: right-footer;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="hero">Hero</div>
+        <div id="mid-one">Mid One</div>
+        <div id="right-one">Right One</div>
+        <div id="mid-two">Mid Two</div>
+        <div id="right-two">Right Two</div>
+         <div id="left-footer">Left Footer</div>
+        <div id="right-footer">Right Footer</div>
+    </main>
+</body>
+</html>
