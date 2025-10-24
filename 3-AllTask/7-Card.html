@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html{
+            height: 100%;
+            width: 100%;
+        }
+        main{
+            height: 100vh;
+            width: 100%;
+             
+        } 
+        section{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            perspective: 1000px;
+            background: radial-gradient(#fa5e2d, #431414);
+            transition: background 0.4s ease;
+        }
+        .card{
+            width: 20%;
+            height: 50%;
+            border-radius: 1rem;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            overflow: hidden;
+            position: relative; /* needed for absolute-positioned images */
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .card img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            backface-visibility: hidden;
+            transition: opacity 0.45s ease, transform 0.45s ease;
+        }
+        .card img.back{
+            opacity: 0;
+            transform: translateZ(-20px) scale(1);
+        }
+        .card img.front{
+            opacity: 1;
+        }
+        .card:hover img.front{
+            opacity: 0;
+            transform: translateZ(-30px) scale(1.02);
+        }
+        .card:hover img.back{
+            opacity: 1;
+            transform: translateZ(0) scale(1.02);
+        }
+        .card:hover{
+            transform: rotateY(12deg) translateY(-6px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+        }
+        /* Change section background when any .card is hovered.
+           Uses modern CSS :has() where available, with a JS fallback that
+           toggles the .card-hover class on the section for older browsers. */
+        section:has(.card:hover){
+            background: radial-gradient(#4a4949, #000000);
+        }
+
+        /* JS fallback toggle */
+        section.card-hover{
+            background: radial-gradient(#4a4949, #000000);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="card">
+                <img class="front" src="/Photos/filioblox1.jpg" alt="">
+                <img class="back" src="/Photos/blackvenom.jpg" alt="">
+            </div>
+            <div class="card">
+                <img class="front" src="/Photos/filioblox2.jpg" alt="">
+                 <img class="back" src="/Photos/blackbatman.jpg" alt="">
+            </div>
+            <div class="card">
+                <img class="front" src="/Photos/filioblox3.jpg" alt="">
+                <img class="back" src="/Photos/blackspider.jpg" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
