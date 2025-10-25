@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Practice of js</title>
+    <script>
+      // Question 1: Arithmetic Operations
+      let a = 10;
+      let b = 3;
+      let result = a + b * 2 - (a % b) + ++a;
+      console.log(result);
+
+      // Question 2: Comparison & Logical Operators
+      let x = 5;
+      let y = "5";
+      let z = 10;
+      console.log(x == y);
+      console.log(x === y);
+      console.log(x < z && y == x);
+      console.log(x > z || x == y);
+
+      // Question 3: Assignment Operators
+      let num = 15;
+      num += 5;
+      num -= 3;
+      num *= 2;
+      num %= 7;
+      num **= 2;
+      console.log(num);
+
+      // Question 4: Ternary Operator
+      let age = 18;
+      let canVote = age >= 18 ? "Yes, you can vote" : "No, you cannot vote";
+      let discount = age < 25 ? 10 : age > 60 ? 20 : 0;
+      console.log(canVote);
+      console.log("Discount:", discount + "%");
+
+      // Question 5: Type Coercion Puzzle
+      console.log("5" + 3 - 2);
+      console.log("5" - 3 + "2");
+      console.log(true + false + null + undefined);
+      console.log([] + {} + []);
+      // Explain each result
+      // "5" + 3 - 2 => "53" - 2 => 51
+      // "5" - 3 + "2" => 2 + "2" => "22"
+      // true + false + null + undefined => 1 + 0 + 0 + NaN => NaN
+      // [] + {} + [] => "" + "[object Object]" + "" => "[object Object]"
+
+      // Question 6: Operator Precedence Challenge
+      let p = 2;
+      let q = 3;
+      let r = 4;
+
+      let output = p + (q * r) / 2 - (p % q) + ++r * 2;
+      console.log(output);
+      // Solve using operator precedence rules
+      // 2 + (3 * 4) / 2 - (2 % 3) + (++4 * 2)
+      // 2 + 12 / 2 - 2 + 10
+      // 2 + 6 - 2 + 10
+      // 16
+      // Final Output: 16
+
+
+    </script>
+  </head>
+  <body></body>
+</html>
