@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JavaScript</title>
+</head>
+<body>
+    <script>
+        // Arithmetic Operators
+        let a = 10;
+        let b = 5;
+        console.log("Addition:", a + b); // 15
+        console.log("Subtraction:", a - b); // 5
+        console.log("Multiplication:", a * b); // 50
+        console.log("Division:", a / b); // 2
+        console.log("Modulus:", a % b); // 0
+        console.log("Exponentiation:", a ** b); // 100000
+
+        // Assignment Operators
+        let c = 20;
+        c += 5; // c = c + 5
+        console.log("c after += 5:", c); // 25
+        c -= 10; // c = c - 10
+        console.log("c after -= 10:", c); // 15
+        c *= 2; // c = c * 2
+        console.log("c after *= 2:", c); // 30
+        c /= 3; // c = c / 3
+        console.log("c after /= 3:", c); // 10
+        c %= 4; // c = c % 4
+        console.log("c after %= 4:", c); // 2
+
+        // Comparison Operators
+        console.log("Is a equal to b?", a == b); // false
+        console.log("Is a not equal to b?", a != b); // true
+        console.log("Is a greater than b?", a > b); // true
+        console.log("Is a less than b?", a < b); // false
+        console.log("Is a less than or equal to b?", a <= b); // false
+        console.log("Is a greater than or equal to b?", a >= b); // true
+        console.log("Is a strictly equal to b?", a === b); // false
+        console.log("Is a strictly not equal to b?", a !== b); // true
+
+        // Logical Operators
+        let isAdult = true;
+        let hasID = false;
+        console.log("Can enter club?", isAdult && hasID); // false
+        console.log("Can enter club?", isAdult || hasID); // true
+        console.log("Is not adult?", !isAdult); // false
+
+        // String Concatenation Operator
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = firstName + " " + lastName;
+        console.log("Full Name:", fullName); // John Doe
+
+        // Ternary Operator
+        let age = 18;
+        let canVote = (age >= 18) ? "Yes" : "No";
+        console.log("Can vote:", canVote); // Yes
+
+        // Unary Operators
+        let num = 5;
+        console.log("Increment:", ++num); // 6
+        console.log("Decrement:", --num); // 5
+        console.log("Type of num:", typeof num); // number
+        console.log("Negation of num:", -num); // -5
+        console.log("Bitwise NOT of num:", ~num); // -6
+        
+    </script>
+</body>
+</html>
