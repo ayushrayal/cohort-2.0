@@ -1,0 +1,171 @@
+
+==============================
+🔥 JavaScript Full Core Notes (English + Hinglish)
+==============================
+
+--------------------------------------
+1. What is JavaScript?
+--------------------------------------
+🔹 English:
+JavaScript (JS) is a high-level, interpreted, lightweight, and dynamic programming language. It makes web pages interactive and dynamic. It can run in browsers (client-side) and on servers (Node.js).
+
+🔹 Hinglish:
+JavaScript ek language hai jo web page ko interactive banati hai — jaise button click pe action, animation, ya data validation.
+
+--------------------------------------
+2. What is a Script Language and Its Types?
+--------------------------------------
+🔹 English:
+A scripting language is a programming language used to automate tasks or control applications. Scripts are usually interpreted line by line.
+
+🔹 Types:
+1. Client-side Script → Runs in browser (e.g., JavaScript)
+2. Server-side Script → Runs on server (e.g., Node.js, PHP, Python)
+
+🔹 Hinglish:
+Script language wo hoti hai jise run hone ke liye compiler nahi, interpreter chahiye hota hai. JS mostly client-side pe chalta hai.
+
+--------------------------------------
+3. History of JavaScript
+--------------------------------------
+- Created by Brendan Eich in 1995 at Netscape.
+- Originally named “Mocha” → “LiveScript” → “JavaScript”.
+- Standardized by ECMA as ECMAScript (ES).
+- ES6 (2015) added let, const, arrow functions, classes, etc.
+
+--------------------------------------
+4. var, let, const
+--------------------------------------
+🔹 var → Function scoped, hoisted, can be re-declared & re-assigned.
+🔹 let → Block scoped, can be re-assigned but not re-declared.
+🔹 const → Block scoped, cannot be re-assigned or re-declared.
+
+Hinglish:
+var purani declaration method hai. let aur const modern aur safe hain.
+
+--------------------------------------
+5. Scope (Global, Block, Functional)
+--------------------------------------
+- Global Scope → Accessible anywhere in code.
+- Function Scope → Variable accessible only inside function.
+- Block Scope → Variable accessible only inside {} block (let, const).
+
+Hinglish:
+let/const sirf block ke andar kaam karte hain, var pura function ya global scope mein milta hai.
+
+--------------------------------------
+6. Reassignment & Redeclaration
+--------------------------------------
+- var → reassign ✅, redeclare ✅
+- let → reassign ✅, redeclare ❌
+- const → reassign ❌, redeclare ❌
+
+--------------------------------------
+7. Temporal Dead Zone (TDZ)
+--------------------------------------
+Variable is hoisted but can’t be accessed before declaration.  
+Hinglish: Variable bana toh jaata hai memory mein, par declare hone tak use nahi kar sakte.
+
+--------------------------------------
+8. Hoisting
+--------------------------------------
+JS moves all declarations to the top before execution.
+- var hoisted with undefined.
+- let/const hoisted but uninitialized (TDZ).
+
+--------------------------------------
+9. Why var leaks outside block
+--------------------------------------
+var is function-scoped, not block-scoped, so it ignores {} blocks and becomes accessible outside.
+
+--------------------------------------
+10. Why const allows changing object properties
+--------------------------------------
+const prevents reassignment of variable reference, not internal object data.
+
+Example:
+const obj = {name: "Ayush"};
+obj.name = "Geetu"; ✅ allowed
+
+--------------------------------------
+11. Falsy and Truthy Values
+--------------------------------------
+Falsy → false, 0, "", null, undefined, NaN
+Truthy → Everything else.
+
+Hinglish:
+Jo values false treat hoti hain wo falsy hain. Baaki sab truthy hain.
+
+--------------------------------------
+12. Data Types
+--------------------------------------
+Primitive → string, number, boolean, null, undefined, symbol, bigint  
+Reference → object, array, function  
+
+--------------------------------------
+13. Dynamic Typing
+--------------------------------------
+Variable ka type runtime par decide hota hai.
+
+Example:
+let x = 10; x = "Ayush"; ✅
+
+--------------------------------------
+14. typeof quirks
+--------------------------------------
+typeof null → "object" ❌ (bug)
+typeof [] → "object"
+typeof NaN → "number"
+
+--------------------------------------
+15. Type Coercion (== vs ===)
+--------------------------------------
+== compares values after converting type.
+=== compares value and type both.
+
+Example:
+5 == "5" ✅ true
+5 === "5" ❌ false
+
+--------------------------------------
+16. Why NaN is a number
+--------------------------------------
+Because NaN represents “Not-a-Number” but belongs to the Number type system.
+
+--------------------------------------
+17. undefined vs null
+--------------------------------------
+undefined → variable declared but not assigned.
+null → intentional empty value.
+
+--------------------------------------
+18. Operators (Arithmetic, Comparison, Logical, Assignment, Unary, Ternary)
+--------------------------------------
+- Arithmetic: +, -, *, /, %, ++, --
+- Comparison: ==, ===, !=, >, <, >=, <=
+- Logical: &&, ||, !
+- Assignment: =, +=, -=, *=, /=
+- Unary: ++, --, typeof
+- Ternary: condition ? true : false
+
+--------------------------------------
+19. typeof and instanceof
+--------------------------------------
+typeof → check primitive type  
+instanceof → check if object belongs to a class
+
+Example:
+[] instanceof Array → true
+
+--------------------------------------
+20. !!value for truthiness
+--------------------------------------
+!! converts any value to its Boolean equivalent.
+!!"Ayush" → true
+!!0 → false
+
+--------------------------------------
+📘 In short:
+JavaScript is dynamic, flexible, and powerful — but needs careful handling of scope, hoisting, and typing.
+
+==============================
