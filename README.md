@@ -8,7 +8,17 @@ This repository contains all the projects and assignments completed during my jo
 - `2-SCSS&CSS/` — Multiple responsive and SCSS projects (Hover effects, Dua Lipa demo, FolioBlox hero). Some completed, some work-in-progress on desktop responsiveness.
 - `3-AllTask/` — Collection of task pages: Resume site, background demos, Black Panther video background, and the Noon carousel (Swiper) project.
 - `4-LenisJS/` — Lenis smooth-scrolling demo (fully working).
-- `5-JavaScript/` — New: started JavaScript basics on 2025-10-23. See `5-JavaScript/README.md` for details.
+- `5-JavaScript/` — Started JavaScript basics on 2025-10-23. See `5-JavaScript/README.md` for details.
+	- What you'll find in `5-JavaScript/`:
+		- `1-BasicOfJS/` — core JS fundamentals and examples:
+			- `1-BasicOfJS.html` — small HTML page used to run and test snippets.
+			- `2-DataTypeInJS.html` — exercises and examples for JS data types.
+			- `3-OperatorsInJS.html` / `3-BasicPractice.html` — operators and practice problems.
+			- `details.txt` / `Details2.txt` — short notes and observations while learning.
+		- `2-ConditionsInJS/` — conditional statements practice:
+			- `1-BasicofConditionalStatements.html` — basic if/else examples.
+			- `2-PracticeOFCS.html` — practice problems for conditionals.
+		- `README.md` — short guide explaining how to run the exercises and recommended next steps (open files in browser and use DevTools Console).
 - `Fonts/` and `Photos/` — Asset folders used across projects.
 
 
