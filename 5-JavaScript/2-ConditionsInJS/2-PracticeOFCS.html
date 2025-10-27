@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice of Conditainal Statements</title>
+    <script>
+      // Input: "red", "yellow", "green"
+      // Output: Action based on traffic light
+      // red → "Stop"
+      // yellow → "Slow down"
+      // green → "Go"
+      // other → "Invalid light"
+      let trafficlight = prompt(
+        "Enter the traffic light color (red, yellow, green):"
+      );
+      if (trafficlight.toLowerCase() === "red") {
+        console.log("Stop");
+      } else if (trafficlight.toLowerCase() === "yellow") {
+        console.log("Slow down");
+      } else if (trafficlight.toLowerCase() === "green") {
+        console.log("Go");
+      } else {
+        console.log("Invalid light");
+      }
+
+      // Check if number is:
+      // - Positive even
+      // - Positive odd
+      // - Negative even
+      // - Negative odd
+      // - Zero
+      let number = parseInt(prompt("Enter a number:"));
+      if (number > 0 && number % 2 === 0) {
+        console.log("Positive even");
+      } else if (number > 0 && number % 2 !== 0) {
+        console.log("Positive odd");
+      } else if (number < 0 && number % 2 === 0) {
+        console.log("Negative even");
+      } else if (number < 0 && number % 2 !== 0) {
+        console.log("Negative odd");
+      } else {
+        console.log("Zero");
+      }
+
+      // Input: two numbers and operator (+, -, *, /)
+      // Perform operation and handle division by zero
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      let operator = prompt("Enter an operator (+, -, *, /):");
+      let result;
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          console.log(`Result: ${result}`);
+          break;
+        case "-":
+          result = num1 - num2;
+          console.log(`Result: ${result}`);
+          break;
+        case "*":
+          result = num1 * num2;
+          console.log(`Result: ${result}`);
+          break;
+        case "/":
+          if (num2 !== 0) {
+            result = num1 / num2;
+            console.log(`Result: ${result}`);
+          } else {
+            console.log("Error: Division by zero");
+          }
+          break;
+        default:
+          console.log("Invalid operator");
+      }
+
+      // BMI = weight / (height * height)
+      // Underweight: <18.5
+      // Normal: 18.5-24.9
+      // Overweight: 25-29.9
+      // Obese: >=30
+      let weight = parseFloat(prompt("Enter your weight in kg:"));
+      let height = parseFloat(prompt("Enter your height in meters:"));
+      let bmi = weight / (height * height);
+      console.log(`Your BMI is: ${bmi.toFixed(2)}`);
+      if (bmi < 18.5) {
+        console.log("Underweight");
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+        console.log("Normal weight");
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        console.log("Overweight");
+      } else {
+        console.log("Obese");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
