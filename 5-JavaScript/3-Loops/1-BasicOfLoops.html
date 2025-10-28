@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // English Examples
+      let count = 1;
+      while (count <= 5) {
+        console.log(`Count: ${count}`);
+        count++;
+      }
+
+      // Real-world: Reading user input
+      let userInput = "";
+      while (userInput !== "quit") {
+        userInput = prompt("Enter command (type 'quit' to exit):");
+        console.log(`You entered: ${userInput}`);
+      }
+
+      // Hinglish Examples
+      let number = 1;
+      while (number <= 5) {
+        console.log(`Number: ${number}`);
+        number++;
+      }
+
+      // Password validation
+      let password = "";
+      while (password.length < 8) {
+        password = prompt("Password dalo (kam se kam 8 characters):");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
