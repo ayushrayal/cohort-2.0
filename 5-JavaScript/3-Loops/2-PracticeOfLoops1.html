@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice of Loops 1</title>
+  </head>
+  <body>
+    <script>
+      // Print all odd numbers from 1 to 20
+      for (let i = 1; i <= 20; i++) {
+        document.writeln(i + "<br>");
+      }
+      document.writeln("<hr>");
+
+      // calculate sum of all even numbers from 1 to 50
+      for (let i = 1; i <= 50; i++) {
+        if (i % 2 === 0) {
+          document.writeln(`${i} is even<br>`);
+        }
+      }
+      document.writeln("<hr>");
+
+      // Print multiplication table of 8 (8x1 to 8x10)
+      for (let i = 1; i <= 10; i++) {
+        document.writeln(`8 x ${i} = ${8 * i}<br>`);
+      }
+      document.writeln("<hr>");
+
+      // Count how many digits in a number
+      let number = 1234567890;
+      let count = 0;
+      while (number != 0) {
+        number = Math.floor(number / 10);
+        count++;
+      }
+      document.writeln(`Total digits: ${count}`);
+      document.writeln("<hr>");
+
+      // Rules for leap year:
+      // - Divisible by 4
+      // - But not divisible by 100 unless also divisible by 400
+      // Examples: 2000 (leap), 1900 (not leap), 2024 (leap)
+      let year = parseInt(prompt("Enter a year:"));
+      if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+        document.writeln(`${year} is a leap year.`);
+      }
+
+      // Input: 3 sides of triangle
+      // Output: "Equilateral", "Isosceles", "Scalene", "Not a triangle"
+      // Triangle inequality: a+b>c, a+c>b, b+c>a
+      let a = parseFloat(prompt("Enter side a:"));
+      let b = parseFloat(prompt("Enter side b:"));
+      let c = parseFloat(prompt("Enter side c:"));
+      if (a === b && b === c) {
+        document.writeln("Equilateral");
+      } else if (a === b || b === c || a === c) {
+        document.writeln("Isosceles");
+      } else if (a + b > c && a + c > b && b + c > a) {
+        document.writeln("Scalene");
+      } else {
+        document.writeln("Not a triangle");
+      }
+
+
+    </script>
+  </body>
+</html>
