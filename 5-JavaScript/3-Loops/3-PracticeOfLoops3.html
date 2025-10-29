@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice of Loops 3</title>
+  </head>
+  <body>
+    <script>
+      const ones = [
+        "zero",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+      ];
+
+      const tens = [
+        "",
+        "",
+        "twenty",
+        "thirty",
+        "forty",
+        "fifty",
+        "sixty",
+        "seventy",
+        "eighty",
+        "ninety",
+      ];
+
+      let num = parseInt(prompt("Enter a number between 0 and 99:"));
+
+      // Range validation
+      if (num < 0 || num > 99) {
+        document.write("Please enter number between 0-99");
+      }
+      // 0-19 handle karo
+      else if (num < 20) {
+        document.write(ones[num]);
+      }
+      // 20-99 handle karo
+      else {
+        let ten = Math.floor(num / 10); // Tens digit
+        let one = num % 10; // Ones digit
+
+        document.write(tens[ten] + (one ? "-" + ones[one] : ""));
+      }
+        let sum =0;
+      for(let i =1; i<5; i++){
+        sum +=i;
+        document.write("<br>" + sum);
+      }
+    </script>
+  </body>
+</html>
