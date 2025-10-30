@@ -2,6 +2,87 @@
 
 This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
 
+## Progress snapshot (updated 2025-10-30)
+
+This README summarizes each top-level folder, its current status, and how to preview the demos locally. Most demos are static and can be opened directly in a browser; some SCSS files have compiled `style.css` versions where needed.
+
+Status keywords:
+- **Completed:** Demo implemented and tested locally.
+- **In progress:** Partial work or SCSS needs compilation / assets need cleanup.
+- **Docs:** Per-folder README exists with usage notes.
+
+### Top-level folders (summary)
+
+- `1-HTML/` (Completed)
+  - `1-HTMLBasicTags.html` — basic HTML examples and reference.
+
+- `2-SCSS&CSS/` (In progress)
+  - Multiple SCSS/CSS experiments and responsive demos including hover effects and the FolioBlox hero. Some pages include compiled `style.css` while others link `style.scss` — compile SCSS before previewing if necessary.
+
+- `3-AllTask/` (Mixed: Completed & In progress)
+  - Collection of task pages and demos:
+    - `1-ResumeWebsite.html`, `2-Backroud.html`, `3-SweatersWebPage.html`, `4-Iphone.html`, `5-BlackPanther.html`, `7-Card.html`, `8-BendoGrid.html`
+  - `6-NoonWebsite/` is a Swiper carousel demo with `index.html`, `style.scss`/`style.css`, `gsap.js`, and a local `README.md` documenting breakpoints and autoplay config.
+  - Recent improvements: Swiper changed to autoplay with responsive breakpoints; `7-Card.html` now uses `section:has(.card:hover)` with a JS fallback to change the section background when any card is hovered.
+
+- `4-LenisJS/` (Completed)
+  - `1-BasicScrolling/` demonstrates integrating Lenis for smooth scrolling. Files: `index.html`, `script.js`, `style.scss`/`style.css`.
+
+- `5-JavaScript/` (Docs + Exercises)
+  - Folders: `1-BasicOfJS/`, `2-ConditionsInJS/`, `3-Loops/`, `4-Strings/` and `README.md` (expanded). These contain small HTML examples and console-based exercises started on 2025-10-23.
+
+- `Fonts/` (Assets)
+  - Custom fonts (OTF/TTF) used across demos.
+
+- `Photos/` (Assets)
+  - Images and small media used by the demos (cards, backgrounds, hero images, small webm clips).
+
+## How to preview locally
+
+Most demos are static HTML and require no build step. Recommended ways to preview:
+
+PowerShell from the repo root:
+```powershell
+# Run a simple static server (Python)
+python -m http.server 8000
+
+# or with npx http-server
+npx http-server . -p 8000
+```
+
+Open `http://localhost:8000/3-AllTask/6-NoonWebsite/index.html` to preview the Swiper demo, or open any other `.html` file directly in the browser.
+
+## SCSS notes
+
+- Some demos link to `style.scss` in development; when previewing, either compile SCSS to `style.css` with `sass` or use the precompiled `style.css` if present.
+
+Compile example (PowerShell):
+```powershell
+npx sass path/to/style.scss path/to/style.css --no-source-map
+```
+
+## Git & large files
+
+- If you plan to keep big video files in the repo, move them to Git LFS and add `.gitattributes` to track them. Large binaries can cause push failures or slow clones.
+
+## Recent notable changes
+
+- Cards: `3-AllTask/7-Card.html` now implements a CSS `:has()` selector to change the parent `section` background when any card is hovered, and includes a JS fallback for older browsers.
+- Swiper: `3-AllTask/6-NoonWebsite` updated to autoplay with responsive breakpoints and touch optimizations.
+- JavaScript: `5-JavaScript/README.md` expanded with a file-by-file listing and run instructions (exercises started 2025-10-23).
+
+## Suggested next tasks (I can do these for you)
+1. Add `5-JavaScript/index.html` that links to all exercise pages for easy browsing.
+2. Add expected console output as comments in JS example files.
+3. Move large media files to Git LFS and update `.gitattributes`.
+
+If you want one of these done, tell me which and I'll implement and push it.
+
+_This README was updated to reflect the current repository state (2025-10-30)._ 
+# cohort-2.0
+
+This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
+
 ## Progress snapshot (as of 2025-10-23)
 
 - `1-HTML/` — Basic HTML exercises and tags (completed). 
