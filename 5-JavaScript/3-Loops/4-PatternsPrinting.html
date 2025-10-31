@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns Printing</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Enter the number of rows for the pattern:"));
+        for(let i = 1; i<=num; i++){
+            for(let j= 1; j<=i; j++){
+                document.write(j);
+            }
+            document.write("<br>");
+        }
+        document.write("<hr>");
+
+        let num2 = parseInt(prompt("Enter the number:"));
+        let fact = 1;
+        for(let i = 1; i<=num2; i++){
+            fact*=i;
+        }
+        document.write("Factorial of " + num2 + " is: " + fact);
+        document.write("<br><hr>");
+
+        let num3 = 23;
+        for(let i = 0; i<=num3; i++){
+            sum = num3%10;
+            result = sum;
+        }
+    </script>
+</body>
+</html>
