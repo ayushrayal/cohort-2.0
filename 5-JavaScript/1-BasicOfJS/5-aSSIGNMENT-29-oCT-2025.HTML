@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment - 29 oct 2025</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 3;
+      console.log(`Addition: ${a} + ${b} = ${a + b}`);
+      console.log(`Subtraction: ${a} - ${b} = ${a - b}`);
+      console.log(`Multiplication: ${a} * ${b} = ${a * b}`);
+      console.log(`Division: ${a} / ${b} = ${a / b}`);
+      console.log(`Modulus: ${a} % ${b} = ${a % b}`);
+
+      let x = 5;
+      console.log(`${x} = ${(x += 3)}`);
+      console.log(`${x} = ${(x -= 3)}`);
+      console.log(`${x} = ${(x *= 3)}`);
+      console.log(`${x} = ${(x /= 3)}`);
+
+      let count = 5;
+      count++;
+      console.log(`After Increment: ${count}`);
+      count--;
+      console.log(`After Decrement: ${count}`);
+
+      console.log(5 == "5"); // true
+      console.log(5 === "5"); // false
+
+      if (10 > 5 && 20 > 10 && 10 === 10) {
+        console.log("All conditions are true");
+      }
+
+      console.log(true || false); // true
+      console.log(!false); // true
+      console.log(true && false); // false
+
+      test();
+      function test() {
+        console.log("Function called successfully!");
+      }
+
+      hello();
+      var hello = function () {
+        console.log("Hello from function expression!");
+      };
+
+      let age = 18;
+        if (age >= 18) {
+            console.log("You are eligible to vote.");
+        } else {
+            console.log("You are not eligible to vote.");
+        }
+
+        
+    </script>
+  </body>
+</html>
