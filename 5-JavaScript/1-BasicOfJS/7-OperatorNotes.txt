@@ -1,0 +1,344 @@
+# 🎯 OPERATORS - COMPLETE GUIDE
+# Created for: Sheryians Coding School
+
+================================================================================
+1. OPERATORS DEFINITION
+================================================================================
+
+WHAT ARE OPERATORS?
+Operators are special symbols that perform operations on operands (variables and values).
+
+OPERATORS KYA HAIN?
+Operators special symbols hain jo operands (variables aur values) par operations perform karte hain.
+
+EXAMPLE:
+let sum = 5 + 3;  // + is operator, 5 and 3 are operands
+
+TYPES OF OPERATORS:
+1. Arithmetic Operators
+2. Comparison Operators
+3. Logical Operators  
+4. Assignment Operators
+5. Unary Operators
+6. Ternary Operator
+7. Bitwise Operators
+
+================================================================================
+2. ARITHMETIC OPERATORS
+================================================================================
+
+DEFINITION:
+Arithmetic operators perform mathematical operations between numeric operands.
+
+ARITHMETIC OPERATORS KYA HAIN?
+Arithmetic operators numeric operands par mathematical operations perform karte hain.
+
+OPERATORS:
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Remainder
+**  Exponentiation
+++  Increment
+--  Decrement
+
+EXAMPLES:
+let a = 10, b = 3;
+
+console.log(a + b);   // 13 (Addition)
+console.log(a - b);   // 7 (Subtraction)
+console.log(a * b);   // 30 (Multiplication)
+console.log(a / b);   // 3.333 (Division)
+console.log(a % b);   // 1 (Remainder)
+console.log(a ** b);  // 1000 (Exponentiation)
+
+// Increment/Decrement
+let count = 5;
+count++;              // 6 (Post-increment)
+++count;              // 7 (Pre-increment)
+count--;              // 6 (Post-decrement)
+
+REAL-WORLD EXAMPLE:
+// Shopping cart total
+let price = 100;
+let quantity = 3;
+let tax = 0.18;
+
+let subtotal = price * quantity;
+let taxAmount = subtotal * tax;
+let total = subtotal + taxAmount;
+
+console.log(`Total: $${total}`);
+
+================================================================================
+3. COMPARISON OPERATORS
+================================================================================
+
+DEFINITION:
+Comparison operators compare two values and return a boolean result.
+
+COMPARISON OPERATORS KYA HAIN?
+Comparison operators do values ko compare karte hain aur boolean result return karte hain.
+
+OPERATORS:
+==   Equal to (with coercion)
+===  Strict equal to (no coercion)
+!=   Not equal to (with coercion)
+!==  Strict not equal to (no coercion)
+>    Greater than
+<    Less than
+>=   Greater than or equal to
+<=   Less than or equal to
+
+EXAMPLES:
+let x = 5, y = "5";
+
+console.log(x == y);    // true (coercion)
+console.log(x === y);   // false (strict)
+console.log(x != y);    // false (coercion)
+console.log(x !== y);   // true (strict)
+console.log(x > 3);     // true
+console.log(x < 10);    // true
+console.log(x >= 5);    // true
+console.log(x <= 5);    // true
+
+REAL-WORLD EXAMPLE:
+// Age verification
+let userAge = 20;
+let votingAge = 18;
+
+if (userAge >= votingAge) {
+    console.log("You can vote!");
+} else {
+    console.log("You cannot vote yet.");
+}
+
+================================================================================
+4. LOGICAL OPERATORS
+================================================================================
+
+DEFINITION:
+Logical operators combine multiple boolean expressions and return a single boolean value.
+
+LOGICAL OPERATORS KYA HAIN?
+Logical operators multiple boolean expressions ko combine karte hain aur ek boolean value return karte hain.
+
+OPERATORS:
+&&   Logical AND (true if both true)
+||   Logical OR (true if at least one true)
+!    Logical NOT (reverses boolean)
+
+EXAMPLES:
+let hasAccount = true;
+let isLoggedIn = false;
+let hasPermission = true;
+
+console.log(hasAccount && isLoggedIn);    // false
+console.log(hasAccount || isLoggedIn);    // true
+console.log(!hasAccount);                 // false
+console.log(hasAccount && hasPermission); // true
+
+// Short-circuit evaluation
+let name = "";
+let displayName = name || "Guest"; // "Guest"
+
+REAL-WORLD EXAMPLE:
+// User authentication
+let hasValidEmail = true;
+let hasValidPassword = true;
+let isEmailVerified = false;
+
+if (hasValidEmail && hasValidPassword && isEmailVerified) {
+    console.log("Full access granted");
+} else if (hasValidEmail && hasValidPassword) {
+    console.log("Please verify your email");
+} else {
+    console.log("Invalid credentials");
+}
+
+================================================================================
+5. ASSIGNMENT OPERATORS
+================================================================================
+
+DEFINITION:
+Assignment operators assign values to variables.
+
+ASSIGNMENT OPERATORS KYA HAIN?
+Assignment operators variables ko values assign karte hain.
+
+OPERATORS:
+=    Simple assignment
++=   Addition assignment
+-=   Subtraction assignment
+*=   Multiplication assignment
+/=   Division assignment
+%=   Remainder assignment
+**=  Exponentiation assignment
+
+EXAMPLES:
+let total = 10;
+
+total += 5;   // total = total + 5 → 15
+total -= 3;   // total = total - 3 → 12
+total *= 2;   // total = total * 2 → 24
+total /= 4;   // total = total / 4 → 6
+total %= 4;   // total = total % 4 → 2
+total **= 3;  // total = total ** 3 → 8
+
+REAL-WORLD EXAMPLE:
+// Shopping cart updates
+let cartTotal = 0;
+
+// Add items
+cartTotal += 100;  // Add ₹100 item
+cartTotal += 50;   // Add ₹50 item
+cartTotal *= 0.9;  // Apply 10% discount
+
+console.log(`Final total: ₹${cartTotal}`);
+
+================================================================================
+6. UNARY OPERATORS
+================================================================================
+
+DEFINITION:
+Unary operators work on a single operand.
+
+UNARY OPERATORS KYA HAIN?
+Unary operators ek hi operand par kaam karte hain.
+
+OPERATORS:
++    Convert to number
+-    Negate
+!    Logical NOT
+typeof   Type of operand
+delete   Delete property
+
+EXAMPLES:
+let str = "123";
+let num = +str;        // 123 (string to number)
+
+let positive = 5;
+let negative = -positive; // -5
+
+let isTrue = true;
+let isFalse = !isTrue; // false
+
+console.log(typeof "hello"); // "string"
+
+let obj = { x: 1, y: 2 };
+delete obj.x;          // obj becomes { y: 2 }
+
+================================================================================
+7. TERNARY OPERATOR
+================================================================================
+
+DEFINITION:
+The ternary operator is a shorthand for if-else statements.
+
+TERNARY OPERATOR KYA HAI?
+Ternary operator if-else statements ka shorthand version hai.
+
+SYNTAX:
+condition ? expressionIfTrue : expressionIfFalse
+
+EXAMPLES:
+let age = 20;
+let canVote = age >= 18 ? "Yes" : "No";
+console.log(canVote); // "Yes"
+
+let score = 85;
+let grade = score >= 90 ? "A" : 
+            score >= 80 ? "B" : 
+            score >= 70 ? "C" : "D";
+console.log(grade); // "B"
+
+REAL-WORLD EXAMPLE:
+// User status message
+let isOnline = true;
+let isAway = false;
+
+let statusMessage = isOnline ? 
+                   (isAway ? "Away" : "Online") : 
+                   "Offline";
+
+console.log(statusMessage); // "Online"
+
+================================================================================
+8. BITWISE OPERATORS
+================================================================================
+
+DEFINITION:
+Bitwise operators perform operations on binary representations of numbers.
+
+BITWISE OPERATORS KYA HAIN?
+Bitwise operators numbers ki binary representations par operations perform karte hain.
+
+OPERATORS:
+&    AND
+|    OR
+^    XOR
+~    NOT
+<<   Left shift
+>>   Right shift
+>>>  Zero-fill right shift
+
+EXAMPLES:
+let a = 5;    // 0101 in binary
+let b = 3;    // 0011 in binary
+
+console.log(a & b);   // 1  (0101 & 0011 = 0001)
+console.log(a | b);   // 7  (0101 | 0011 = 0111)
+console.log(a ^ b);   // 6  (0101 ^ 0011 = 0110)
+console.log(~a);      // -6 (invert bits)
+console.log(a << 1);  // 10 (0101 << 1 = 1010)
+console.log(a >> 1);  // 2  (0101 >> 1 = 0010)
+
+================================================================================
+9. OPERATOR PRECEDENCE
+================================================================================
+
+DEFINITION:
+Operator precedence determines the order in which operators are evaluated.
+
+OPERATOR PRECEDENCE KYA HAI?
+Operator precedence determine karta hai ki operators kis order mein evaluate honge.
+
+PRECEDENCE ORDER (High to Low):
+1. () - Grouping
+2. ++ -- - Increment/Decrement
+3. ! ~ - Logical/Bitwise NOT
+4. * / % - Multiplication/Division
+5. + - - Addition/Subtraction
+6. < <= > >= - Comparison
+7. == != === !== - Equality
+8. && - Logical AND
+9. || - Logical OR
+10. = += -= etc. - Assignment
+11. , - Comma
+
+EXAMPLE:
+let result = 5 + 3 * 2;   // 11 (not 16)
+// 3*2 = 6, then 5+6 = 11
+
+let complex = (5 + 3) * 2; // 16 (parentheses first)
+
+================================================================================
+10. PRACTICE EXERCISES
+================================================================================
+
+EXERCISE 1: Arithmetic Operations
+Calculate: (10 + 5) * 3 - 8 / 2
+
+EXERCISE 2: Comparison Practice
+Predict outputs of various comparison operations
+
+EXERCISE 3: Logical Operations
+Create complex conditions using &&, ||, !
+
+EXERCISE 4: Real-world Calculator
+Build a simple calculator that can add, subtract, multiply, divide
+
+================================================================================
+END OF OPERATORS
+================================================================================
