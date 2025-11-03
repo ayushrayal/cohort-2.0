@@ -1,0 +1,247 @@
+# 🚀 VARIABLES & DATA TYPES - COMPLETE GUIDE
+# Created for: Sheryians Coding School
+
+================================================================================
+1. VARIABLES DEFINITION
+================================================================================
+
+WHAT ARE VARIABLES?
+Variables are containers that store data values. They act as named storage locations in memory.
+
+VARIABLES KYA HAIN?
+Variables data values store karne wale containers hain. Ye memory mein named storage locations ki tarah kaam karte hain.
+
+EXAMPLE:
+let studentName = "John";  // Variable declaration and assignment
+let studentAge = 20;
+
+TYPES OF VARIABLES:
+1. var - Function scoped, hoisted, can redeclare
+2. let - Block scoped, cannot redeclare, can reassign  
+3. const - Block scoped, cannot redeclare or reassign
+
+================================================================================
+2. var, let, const DETAILED EXPLANATION
+================================================================================
+
+VAR (Old Way):
+- Function scoped or global
+- Hoisted with undefined
+- Can be redeclared and reassigned
+- Issues: Leaks outside blocks
+
+EXAMPLE:
+function testVar() {
+    if (true) {
+        var x = 10;  // Function scoped
+    }
+    console.log(x); // 10 (accessible outside block)
+}
+testVar();
+
+LET (Modern):
+- Block scoped ({ } scope)
+- Hoisted but in Temporal Dead Zone (TDZ)
+- Cannot be redeclared in same scope
+- Can be reassigned
+
+EXAMPLE:
+function testLet() {
+    if (true) {
+        let y = 20;  // Block scoped
+        console.log(y); // 20
+    }
+    // console.log(y); // Error - not accessible
+}
+testLet();
+
+CONST (Modern):
+- Block scoped
+- Cannot be reassigned or redeclared
+- Must be initialized during declaration
+- Value can be mutated (for objects/arrays)
+
+EXAMPLE:
+const PI = 3.14159;
+// PI = 3.14; // Error - cannot reassign
+
+const user = { name: "John" };
+user.name = "Jane"; // ✅ Allowed - mutation
+// user = { name: "Bob" }; // ❌ Error - reassignment
+
+================================================================================
+3. DATA TYPES DEFINITION
+================================================================================
+
+WHAT ARE DATA TYPES?
+Data types define the type of data that can be stored and manipulated in a program.
+
+DATA TYPES KYA HAIN?
+Data types define karte hain ki program mein kis type ka data store aur manipulate kiya ja sakta hai.
+
+TYPES OF DATA TYPES:
+1. Primitive Types (Immutable)
+2. Reference Types (Mutable)
+
+================================================================================
+4. PRIMITIVE DATA TYPES (7 Types)
+================================================================================
+
+1. STRING - Text data
+EXAMPLE:
+let firstName = "John";
+let lastName = 'Doe';
+let message = `Hello ${firstName}`;
+
+2. NUMBER - Integer and floating-point numbers
+EXAMPLE:  
+let age = 25;
+let price = 99.99;
+let temperature = -5;
+
+3. BOOLEAN - true or false values
+EXAMPLE:
+let isLoggedIn = true;
+let isEmpty = false;
+let hasPermission = 5 > 3; // true
+
+4. UNDEFINED - Variable declared but no value assigned
+EXAMPLE:
+let x;
+console.log(x); // undefined
+let y = undefined;
+
+5. NULL - Intentional absence of any value
+EXAMPLE:
+let user = null; // Explicitly empty
+let data = null;
+
+6. SYMBOL - Unique and immutable primitive value
+EXAMPLE:
+let id = Symbol("id");
+let id2 = Symbol("id");
+console.log(id === id2); // false
+
+7. BIGINT - Large integers beyond Number limits
+EXAMPLE:
+let bigNumber = 123456789012345678901234567890n;
+let huge = BigInt("9007199254740991");
+
+================================================================================
+5. REFERENCE DATA TYPES
+================================================================================
+
+1. OBJECT - Collection of key-value pairs
+EXAMPLE:
+let person = {
+    name: "John",
+    age: 30,
+    isStudent: false
+};
+
+2. ARRAY - Ordered list of values
+EXAMPLE:
+let colors = ["red", "green", "blue"];
+let mixed = [1, "hello", true, null];
+
+3. FUNCTION - Callable object
+EXAMPLE:
+function greet(name) {
+    return `Hello ${name}`;
+}
+let sayHello = function() { return "Hello"; };
+
+================================================================================
+6. TYPE CHECKING
+================================================================================
+
+typeof OPERATOR:
+console.log(typeof "hello");    // "string"
+console.log(typeof 42);         // "number"
+console.log(typeof true);       // "boolean"
+console.log(typeof undefined);  // "undefined"
+console.log(typeof null);       // "object" ⚠️
+console.log(typeof {});         // "object"
+console.log(typeof []);         // "object" ⚠️
+console.log(typeof function(){});// "function"
+
+PROPER TYPE CHECKING:
+// For arrays
+Array.isArray([]); // true
+Array.isArray({}); // false
+
+// For null
+value === null
+
+// For custom types
+Object.prototype.toString.call(value);
+
+================================================================================
+7. TYPE CONVERSION
+================================================================================
+
+EXPLICIT CONVERSION:
+String(123);        // "123"
+Number("123");      // 123
+Boolean(1);         // true
+Boolean(0);         // false
+
+IMPLICIT CONVERSION (Coercion):
+"5" + 3;            // "53"
+"5" - 3;            // 2
+"5" == 5;           // true
+"5" === 5;          // false
+
+================================================================================
+8. MEMORY MANAGEMENT
+================================================================================
+
+PRIMITIVE TYPES (Pass by Value):
+let a = 10;
+let b = a;    // Value copy
+b = 20;
+console.log(a); // 10 (unchanged)
+
+REFERENCE TYPES (Pass by Reference):
+let obj1 = { x: 1 };
+let obj2 = obj1;   // Reference copy
+obj2.x = 2;
+console.log(obj1.x); // 2 (both changed)
+
+================================================================================
+9. BEST PRACTICES
+================================================================================
+
+✅ DO:
+- Use const by default
+- Use let when reassignment needed
+- Use descriptive variable names
+- Initialize variables when declaring
+- Use === instead of ==
+
+❌ DON'T:
+- Use var in modern code
+- Use undeclared variables
+- Use single letter variable names
+- Rely on type coercion
+
+================================================================================
+10. PRACTICE EXERCISES
+================================================================================
+
+EXERCISE 1: Variable Declaration
+Declare variables for:
+- Your name (constant)
+- Your age (can change)
+- Whether you're student (boolean)
+- Favorite foods (array)
+
+EXERCISE 2: Type Checking
+Write a function that takes any value and returns its actual type
+
+EXERCISE 3: Type Conversion
+Convert between different types and predict outputs
+
+================================================================================
+END OF VARIABLES & DATA TYPES
+================================================================================
