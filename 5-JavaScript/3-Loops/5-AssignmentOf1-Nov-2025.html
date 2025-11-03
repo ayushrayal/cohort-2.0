@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of 1 Nov 2025</title>
+</head>
+<body>
+    <script>
+        // Level 1 - Pure Beginner Practice
+        // 1. Write a for loop that prints numbers from 1 to 10.
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        // 2. Write a for loop that prints even numbers between 1 and 20.
+        for(let i=1; i<=20; i++){
+            if(i%2 === 0){
+                console.log(`Even number between 1 to 20: ${i}`);
+            }
+        }
+
+        // 3. Write a for loop that prints numbers from 10 to 1 in descending order.
+        for(let i = 10; i>0; i--){
+            console.log(i);
+        }
+
+        // 4. Print the word ""Yess!"" five times using a for loop.
+        for(let i = 0; i<=5; i++){
+            console.log("Yess!");
+        }
+
+        // 5. Print whether numbers from 1 to 10 are even or odd.
+        for(let i = 1; i<=10; i++){
+            if(i%2 === 0){
+                console.log(`${i} is Even`);
+            } else {
+                console.log(`${i} is Odd`);
+            }
+        }
+
+        let num = parseInt(prompt("Enter a number to check positive and negative: "));
+        if(num >= 0){
+            console.log(`${num} is Positive Number`);
+        } else {
+            console.log(`${num} is Negative Number`);
+        }
+    </script>
+</body>
+</html>
