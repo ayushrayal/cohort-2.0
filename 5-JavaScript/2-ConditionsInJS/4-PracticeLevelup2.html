@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level up</title>
+</head>
+<body>
+    <script>
+        let age = prompt("Enter your age:");
+        if(age === null){
+            console.error("User cancelled the prompt.");
+        }else{
+            if(age.trim() === ""){
+                console.error("No age provided.");
+            }else{
+                age = Number(age.trim());
+                if(isNaN(age)){
+                    console.warn("Invalid age input.");
+                }else{
+                    console.log("Your age is " + age);
+                }
+            }
+        }
+
+        let attempts = 1;
+        while(attempts <= 3){
+            let password = prompt("Enter your password (Attempt " + attempts + " of 3):");
+            if(password === null){
+                console.error("User cancelled the prompt.");
+                break;
+            }else if(password === "letmein"){
+                console.log("Access granted.");
+                break;
+            }else{
+                console.warn("Incorrect password.");
+                attempts++;
+                if(attempts > 3){
+                    console.error("Access denied. Too many incorrect attempts.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
