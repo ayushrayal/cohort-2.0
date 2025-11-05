@@ -45,6 +45,15 @@
         } else {
             console.log(`${num} is Negative Number`);
         }
+        
+        let num1 = parseInt(prompt("Enter Start Number: "));
+        let num2 = parseInt(prompt("Enter End Number: "));
+        if(num1 > num2){
+            console.error("Start number should be less than or equal to End number.");
+        }
+        for(let i = num1; i<=num2; i++){
+            console.log(i);
+        }
     </script>
 </body>
 </html>
