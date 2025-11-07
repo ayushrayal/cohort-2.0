@@ -29,7 +29,17 @@ Status keywords:
   - `1-BasicScrolling/` demonstrates integrating Lenis for smooth scrolling. Files: `index.html`, `script.js`, `style.scss`/`style.css`.
 
 - `5-JavaScript/` (Docs + Exercises)
-  - Folders: `1-BasicOfJS/`, `2-ConditionsInJS/`, `3-Loops/`, `4-Strings/` and `README.md` (expanded). These contain small HTML examples and console-based exercises started on 2025-10-23.
+  - Recent updates (as of Nov 7):
+    - New: `5-FunctionsInJs/` folder with basic function examples and practice
+    - Added loop pattern printing and Nov 1 assignment in `3-Loops/`
+  - Structure:
+    - `1-BasicOfJS/` — Variables, data types, operators
+    - `2-ConditionsInJS/` — if/else, switch statements
+    - `3-Loops/` — while loops, patterns, assignments
+    - `4-Strings/` — String manipulation basics
+    - `5-FunctionsInJs/` — Function declarations and usage
+    - Expanded `README.md` with run instructions
+  - All examples include console.log output for learning
 
 - `Fonts/` (Assets)
   - Custom fonts (OTF/TTF) used across demos.
@@ -67,9 +77,9 @@ npx sass path/to/style.scss path/to/style.css --no-source-map
 
 ## Recent notable changes
 
-- Cards: `3-AllTask/7-Card.html` now implements a CSS `:has()` selector to change the parent `section` background when any card is hovered, and includes a JS fallback for older browsers.
-- Swiper: `3-AllTask/6-NoonWebsite` updated to autoplay with responsive breakpoints and touch optimizations.
-- JavaScript: `5-JavaScript/README.md` expanded with a file-by-file listing and run instructions (exercises started 2025-10-23).
+- JavaScript (Nov 7): Added function basics and more loop practice including pattern printing. New `5-FunctionsInJs/` folder created.
+- Cards (Oct 30): `3-AllTask/7-Card.html` implements CSS `:has()` for section background changes on hover (with JS fallback).
+- Swiper (Oct 30): `3-AllTask/6-NoonWebsite` uses autoplay with responsive breakpoints and touch optimizations.
 
 ## Suggested next tasks (I can do these for you)
 1. Add `5-JavaScript/index.html` that links to all exercise pages for easy browsing.
@@ -78,7 +88,7 @@ npx sass path/to/style.scss path/to/style.css --no-source-map
 
 If you want one of these done, tell me which and I'll implement and push it.
 
-_This README was updated to reflect the current repository state (2025-10-30)._ 
+_This README was updated to reflect the current repository state (2025-11-07)._ 
 # cohort-2.0
 
 This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
