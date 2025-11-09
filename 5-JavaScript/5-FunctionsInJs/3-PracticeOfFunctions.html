@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice of Functions</title>
+    <script>
+      // Ek function banayo jo user ka naam leke
+      // "Hello [name], welcome to JavaScript!" return kare
+      // Example: greet("Rahul") → "Hello Rahul, welcome to JavaScript!"
+      function greet() {
+        let name = prompt("Enter your name:");
+        return `Hello, ${name}! Welcome to the JavaScript functions practice.`;
+      }
+      console.log(greet());
+
+      // Ek function banayo jo do numbers aur operation (+, -, *, /) leke
+      // calculation kare aur result return kare
+      // Example: calculate(10, 5, '+') → 15
+      // Example: calculate(10, 5, '*') → 50
+      function arthematicOperations(a, b) {
+        let sum = a + b;
+        let difference = a - b;
+        let product = a * b;
+        let quotient = a / b;
+        return `First number is ${a}. Second number is ${b}. Sum: ${sum}, Difference: ${difference}, Product: ${product}, Quotient: ${quotient}`;
+      }
+      console.log(arthematicOperations(10, 5));
+
+      // Ek function banayo jo number leke check kare
+      // ki woh even hai ya odd
+      // Example: checkEvenOdd(7) → "Odd"
+      // Example: checkEvenOdd(12) → "Even"
+      function checkEvenOdd(num) {
+        if (num % 2 === 0) {
+          return `${num} is an even number.`;
+        } else {
+          return `${num} is an odd number.`;
+        }
+      }
+      let number = parseInt(prompt("Enter a number to check even or odd:"));
+      console.log(checkEvenOdd(number));
+
+      function repeatstring(str, times){
+        for(let i=0; i<times; i++){
+          console.log(str+" ");
+        }
+      }
+        let str = prompt("Enter a string to repeat:");
+        let times = parseInt(prompt("Enter number of times to repeat the string:"));
+        repeatstring(str, times);
+    </script>
+  </head>
+  <body></body>
+</html>
