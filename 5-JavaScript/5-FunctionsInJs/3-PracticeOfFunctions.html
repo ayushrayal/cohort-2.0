@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice of Functions</title>
     <script>
+      // 📚 LEVEL 1: BASIC FUNCTIONS
       // Ek function banayo jo user ka naam leke
       // "Hello [name], welcome to JavaScript!" return kare
       // Example: greet("Rahul") → "Hello Rahul, welcome to JavaScript!"
@@ -41,14 +42,54 @@
       let number = parseInt(prompt("Enter a number to check even or odd:"));
       console.log(checkEvenOdd(number));
 
-      function repeatstring(str, times){
-        for(let i=0; i<times; i++){
-          console.log(str+" ");
+      function repeatstring(str, times) {
+        for (let i = 0; i < times; i++) {
+          console.log(str + " ");
         }
       }
-        let str = prompt("Enter a string to repeat:");
-        let times = parseInt(prompt("Enter number of times to repeat the string:"));
-        repeatstring(str, times);
+      let str = prompt("Enter a string to repeat:");
+      let times = parseInt(
+        prompt("Enter number of times to repeat the string:")
+      );
+      repeatstring(str, times);
+
+      // 🎯 LEVEL 2: FUNCTION EXPRESSIONS & ARROW FUNCTIONS
+
+      // Arrow functions use karke yeh functions banayo:
+      // 1. Square function: number ka square return kare
+      // 2. IsAdult function: age leke check kare 18+ hai ya nahi
+      // 3. GetFirstCharacter function: string ka pehla character return kare
+
+      // Example: square(5) → 25
+      // Example: isAdult(20) → true
+      // Example: getFirstChar("JavaScript") → "J"
+      let square = (num) => {
+        return num * num;
+      };
+      let numberToSquare = parseInt(prompt("Enter a number to square:"));
+      console.log(
+        `The square of ${numberToSquare} is ${square(numberToSquare)}.`
+      );
+
+      let isAdult = function (age) {
+        return age >= 18;
+      };
+      let userAge = parseInt(
+        prompt("Enter your age to check if you are an adult:")
+      );
+      if (isAdult(userAge)) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are not an adult.");
+      }
+
+      let getFirstchar = (str) => str.charAt(0);
+      let userString = prompt("Enter a string to get its first character:");
+      console.log(
+        `The first character of "${userString}" is "${getFirstchar(
+          userString
+        )}".`
+      );
     </script>
   </head>
   <body></body>
