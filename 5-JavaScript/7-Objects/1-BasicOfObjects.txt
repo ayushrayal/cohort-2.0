@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Objects</title>
+    <script>
+        // Creating an object using object literal syntax
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            occupation: "Developer"
+        };
+
+        // Accessing object properties
+        console.log("First Name:", person.firstName); // John
+        console.log("Last Name:", person["lastName"]); // Doe
+
+        // Adding a new property
+        person.email = "john.doe@example.com";
+        console.log("Email:", person.email); // john.doe@example.com
+
+        // Modifying an existing property
+        person.age = 31;    
+        console.log("Updated Age:", person.age); // 31
+
+        // Deleting a property
+        delete person.occupation;   
+        console.log("Occupation after deletion:", person.occupation); // undefined
+        
+        // Iterating over object properties
+        for (let key in person) {
+            console.log(key + ": " + person[key]);
+        }   
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

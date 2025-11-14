@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let obj = {
+        name: "ayush",
+        age: 21,
+        fnc: function () {
+          console.log(this);
+          let fnc2 = () => {
+            console.log(this);
+          };
+          fnc2();
+        },
+      };
+      console.log(obj.fnc);
+    </script>
+  </head>
+  <body></body>
+</html>
