@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Rockybilly";
+  src: url("/Fonts/rockybilly/Rockybilly.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* additional seasonal fonts */
+@font-face {
+  font-family: "SpringIsComing";
+  src: url("/Fonts/spring-is-coming/Spring is Coming - TTF.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HeartyWinter";
+  src: url("/Fonts/hearty-winter/Hearty Winter.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DiaryAutumn";
+  src: url("/Fonts/diary-autumn/Diary Autumn ttf.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff0095 0%, #8a37bb 100%);
+  position: relative;
+  transition: background 0.5s ease;
+
+  h1 {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    color: #fff;
+    font-size: 3.25rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.45);
+    transition: transform 0.4s ease, text-shadow 0.4s ease, color 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+    /* subtle entrance animation when added */
+    &.animate {
+      animation: fadeUp 620ms cubic-bezier(.2,.9,.2,1) both;
+    }
+    display: inline-block;
+    position: absolute;
+    /* make room for pseudo glow */
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: 160%;
+      height: 70%;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.02) 55%, transparent 70%);
+      filter: blur(12px);
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 420ms ease, transform 420ms ease;
+      pointer-events: none;
+    }
+  }
+
+  h1:hover {
+    transform: translateX(-50%) scale(1.18) rotate(-0.5deg);
+    text-shadow: 6px 6px 18px rgba(0,0,0,0.65);
+    letter-spacing: 1.5px;
+    color: #fffbe8;
+  }
+
+  /* show glow on hover (but respect reduced-motion) */
+  @media (prefers-reduced-motion: no-preference) {
+    h1:hover::after {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1.02);
+    }
+  }
+
+  section {
+    height: 320px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    z-index: 1;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.35);
+    }
+
+    #selectSeason {
+      padding: 12px 14px;
+      font-size: 1rem;
+      border: 2px solid rgba(200,200,200,0.9);
+      border-radius: 8px;
+      outline: none;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      background: linear-gradient(180deg, #fff, #fafafa);
+    }
+
+    #selectSeason:hover {
+      transform: translateY(-3px);
+      border-color: #6464ff;
+      box-shadow: 0 6px 18px rgba(100,100,255,0.12);
+    }
+
+    #selectSeason:focus {
+      border-color: #4b4bff;
+      box-shadow: 0 6px 18px rgba(75,75,255,0.14);
+    }
+    /* small micro-interaction for focus/keyboard users */
+    #selectSeason:active {
+      transform: translateY(-1px) scale(0.995);
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.8rem; top: 12px; }
+    section { width: 260px; height: 260px; }
+    #selectSeason { padding: 10px; font-size: 0.95rem; }
+  }
+}
+
+/* when a special selection sets a decorative font, add the class from JS */
+h1.rocky {
+  font-family: "Rockybilly", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* explicit seasonal font utility classes */
+h1.spring-font {
+  font-family: "SpringIsComing", Arial, sans-serif;
+}
+
+h1.summer-font {
+  font-family: "Rockybilly", Arial, sans-serif;
+}
+
+h1.autumn-font {
+  font-family: "DiaryAutumn", Arial, sans-serif;
+}
+
+h1.winter-font {
+  font-family: "HeartyWinter", Arial, sans-serif;
+}
+
+/* background overlay used for crossfading season images */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 620ms cubic-bezier(.2,.9,.2,1);
+  z-index: 0;
+  filter: brightness(0.98) saturate(0.95);
+}
+.bg-overlay.visible { opacity: 1; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(-8px) scale(0.985); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* optional breathing effect for the card */
+.breath {
+  animation: floatSlow 4s ease-in-out infinite;
+}

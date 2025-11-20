@@ -8,7 +8,7 @@ btn.addEventListener("click",function(){
      console.log('Your file will be downloaded in',num/10,'seconds');
      let timeout = setInterval(()=>{
      progress++;
-     console.log(progress);
+    //  console.log(progress);
      h2.innerHTML = progress+'%';
      inner.style.width = progress+'%';
   },num);
