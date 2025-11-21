@@ -1,0 +1,38 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+main ul {
+  background-color: beige;
+  padding: 50px;
+  border-radius: 10px;
+}
+main ul li {
+  font-size: 19px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: rgb(40, 39, 39);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main ul .important {
+  background-color: yellow;
+  text-decoration: line-through;
+}/*# sourceMappingURL=style.css.map */
