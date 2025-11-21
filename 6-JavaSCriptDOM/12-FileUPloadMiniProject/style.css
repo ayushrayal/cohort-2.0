@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+main input {
+  display: none;
+}
+main button {
+  padding: 30px;
+  background-color: rgb(13, 99, 13);
+  color: white;
+  border-radius: 10px;
+  font-size: 2rem;
+  transition: all ease 1s;
+}
+main button:hover {
+  scale: 0.8;
+  background-color: rgb(30, 75, 30);
+}/*# sourceMappingURL=style.css.map */
