@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    h1{
+        font-size: 15rem;
+        color: beige;
+        user-select: none;
+        letter-spacing: -.5rem;
+        font-weight: 500;
+    }
+}
