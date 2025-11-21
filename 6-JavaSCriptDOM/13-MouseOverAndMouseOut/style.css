@@ -1,0 +1,26 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+body #abcd {
+  height: 40%;
+  width: 40%;
+  background-color: beige;
+  border-radius: 10px;
+  transition: all ease 2s;
+}/*# sourceMappingURL=style.css.map */
