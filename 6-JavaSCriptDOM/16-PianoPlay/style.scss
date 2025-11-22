@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paino-container {
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#keys-area {
+    // display: flex;
+    // gap: 2px;
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.key {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s ease;
+}
+
+.white {
+    height: 150px;
+    width: 60px;
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.white:hover {
+    background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
+}
+
+.white:active {
+    transform: translateY(3px);
+    background: linear-gradient(to bottom, #e8e8e8, #dbdbdb);
+}
