@@ -1,70 +1,146 @@
-*{
+// Variables
+$primary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+$white-key-gradient: linear-gradient(to bottom, #fff, #f0f0f0);
+$white-key-hover: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
+$white-key-active: linear-gradient(to bottom, #e8e8e8, #dbdbdb);
+$keys-bg: #2c3e50;
+$container-bg: rgba(255, 255, 255, 0.1);
+$shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+$key-border: 1px solid #ccc;
+$key-border-radius: 0 0 8px 8px;
+$container-border-radius: 15px;
+$keys-border-radius: 10px;
+
+// Reset
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-main{
+// Main container
+main {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: $primary-gradient;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#paino-container {
-    height: 40%;
-    width: 100%;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#keys-area {
-    // display: flex;
-    // gap: 2px;
-    background: #2c3e50;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+// Piano container (fixed typo: paino -> piano)
+#piano-container {
+    width: 100%;
+    max-width: 600px;
+    background: $container-bg;
+    padding: 30px;
+    border-radius: $container-border-radius;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow;
+}
+
+// Keys area (fixed ID to match HTML: keysArea)
+#keysArea {
+    display: flex;
+    gap: 2px;
+    background: $keys-bg;
+    padding: 20px;
+    border-radius: $keys-border-radius;
+    box-shadow: $shadow;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+// Base key styles
 .key {
     cursor: pointer;
     user-select: none;
     transition: all 0.1s ease;
+    position: relative;
+    
+    &:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 2px;
+    }
 }
 
+// White keys
 .white {
     height: 150px;
     width: 60px;
-    background: linear-gradient(to bottom, #fff, #f0f0f0);
-    border: 1px solid #ccc;
-    border-radius: 0 0 8px 8px;
+    min-width: 60px;
+    background: $white-key-gradient;
+    border: $key-border;
+    border-radius: $key-border-radius;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 10px;
     font-weight: bold;
     color: #333;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+        background: $white-key-hover;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    &:active {
+        transform: translateY(3px);
+        background: $white-key-active;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
 }
 
-.white:hover {
-    background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
+// Responsive design
+@media (max-width: 768px) {
+    #piano-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    #keysArea {
+        padding: 15px;
+        gap: 1px;
+    }
+    
+    .white {
+        height: 120px;
+        width: 50px;
+        min-width: 50px;
+        font-size: 16px;
+    }
 }
 
-.white:active {
-    transform: translateY(3px);
-    background: linear-gradient(to bottom, #e8e8e8, #dbdbdb);
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    
+    #piano-container {
+        padding: 15px;
+    }
+    
+    #keysArea {
+        padding: 10px;
+    }
+    
+    .white {
+        height: 100px;
+        width: 45px;
+        min-width: 45px;
+        font-size: 14px;
+    }
 }
