@@ -7,138 +7,171 @@ This repository contains all the projects and assignments completed during my jo
 This README summarizes each top-level folder, its current status, and how to preview the demos locally. Most demos are static and can be opened directly in a browser; some SCSS files have compiled `style.css` versions where needed.
 
 Status keywords:
-- **Completed:** Demo implemented and tested locally.
-- **In progress:** Partial work or SCSS needs compilation / assets need cleanup.
-- **Docs:** Per-folder README exists with usage notes.
 
 ### Top-level folders (summary)
 
-- `1-HTML/` (Completed)
   - `1-HTMLBasicTags.html` — basic HTML examples and reference.
 
-- `2-SCSS&CSS/` (In progress)
   - Multiple SCSS/CSS experiments and responsive demos including hover effects and the FolioBlox hero. Some pages include compiled `style.css` while others link `style.scss` — compile SCSS before previewing if necessary.
 
-- `3-AllTask/` (Mixed: Completed & In progress)
   - Collection of task pages and demos:
     - `1-ResumeWebsite.html`, `2-Backroud.html`, `3-SweatersWebPage.html`, `4-Iphone.html`, `5-BlackPanther.html`, `7-Card.html`, `8-BendoGrid.html`
   - `6-NoonWebsite/` is a Swiper carousel demo with `index.html`, `style.scss`/`style.css`, `gsap.js`, and a local `README.md` documenting breakpoints and autoplay config.
   - Recent improvements: Swiper changed to autoplay with responsive breakpoints; `7-Card.html` now uses `section:has(.card:hover)` with a JS fallback to change the section background when any card is hovered.
 
-- `4-LenisJS/` (Completed)
   - `1-BasicScrolling/` demonstrates integrating Lenis for smooth scrolling. Files: `index.html`, `script.js`, `style.scss`/`style.css`.
 
-- `5-JavaScript/` (Docs + Exercises)
   - Recent updates (as of Nov 7):
     - New: `5-FunctionsInJs/` folder with basic function examples and practice
     - Added loop pattern printing and Nov 1 assignment in `3-Loops/`
-  - Structure:
     - `1-BasicOfJS/` — Variables, data types, operators
     - `2-ConditionsInJS/` — if/else, switch statements
-    - `3-Loops/` — while loops, patterns, assignments
     - `4-Strings/` — String manipulation basics
-    - `5-FunctionsInJs/` — Function declarations and usage
-    - Expanded `README.md` with run instructions
-  - All examples include console.log output for learning
 
-- `Fonts/` (Assets)
-  - Custom fonts (OTF/TTF) used across demos.
-
-- `Photos/` (Assets)
-  - Images and small media used by the demos (cards, backgrounds, hero images, small webm clips).
-
-## How to preview locally
-
-Most demos are static HTML and require no build step. Recommended ways to preview:
-
-PowerShell from the repo root:
-```powershell
-# Run a simple static server (Python)
-python -m http.server 8000
-
-# or with npx http-server
-npx http-server . -p 8000
-```
-
-Open `http://localhost:8000/3-AllTask/6-NoonWebsite/index.html` to preview the Swiper demo, or open any other `.html` file directly in the browser.
-
-## SCSS notes
-
-- Some demos link to `style.scss` in development; when previewing, either compile SCSS to `style.css` with `sass` or use the precompiled `style.css` if present.
-
-Compile example (PowerShell):
-```powershell
-npx sass path/to/style.scss path/to/style.css --no-source-map
-```
-
-## Git & large files
-
-- If you plan to keep big video files in the repo, move them to Git LFS and add `.gitattributes` to track them. Large binaries can cause push failures or slow clones.
-
-## Recent notable changes
-
-- JavaScript (Nov 7): Added function basics and more loop practice including pattern printing. New `5-FunctionsInJs/` folder created.
-- Cards (Oct 30): `3-AllTask/7-Card.html` implements CSS `:has()` for section background changes on hover (with JS fallback).
-- Swiper (Oct 30): `3-AllTask/6-NoonWebsite` uses autoplay with responsive breakpoints and touch optimizations.
-
-## Suggested next tasks (I can do these for you)
-1. Add `5-JavaScript/index.html` that links to all exercise pages for easy browsing.
-2. Add expected console output as comments in JS example files.
-3. Move large media files to Git LFS and update `.gitattributes`.
-
-If you want one of these done, tell me which and I'll implement and push it.
-
-_This README was updated to reflect the current repository state (2025-11-07)._ 
 # cohort-2.0
 
-This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
+This repository is a collection of small front-end exercises, demos and mini-projects used during the cohort. It contains example HTML/CSS/SCSS/JavaScript projects, local fonts and images used by the demos.
 
-## Progress snapshot (as of 2025-10-23)
+## Structure (top-level)
+- `1-HTML/` — basic HTML examples
+- `3-AllTask/` — assorted larger example pages and challenges
+- `5-JavaScript/` — notes, exercises and code samples for JavaScript
+- `6-JavaSCriptDOM/` — DOM mini-projects (Counter, Notepad, File upload demos, etc.)
+- `Fonts/` — local font files used by demos
+- `Photos/` — example images used by seasonal / background demos
+- `spider.jpg` and miscellaneous assets at the root
 
-- `1-HTML/` — Basic HTML exercises and tags (completed). 
-- `2-SCSS&CSS/` — Multiple responsive and SCSS projects (Hover effects, Dua Lipa demo, FolioBlox hero). Some completed, some work-in-progress on desktop responsiveness.
-- `3-AllTask/` — Collection of task pages: Resume site, background demos, Black Panther video background, and the Noon carousel (Swiper) project.
-- `4-LenisJS/` — Lenis smooth-scrolling demo (fully working).
-- `5-JavaScript/` — Started JavaScript basics on 2025-10-23. See `5-JavaScript/README.md` for details.
-	- What you'll find in `5-JavaScript/`:
-		- `1-BasicOfJS/` — core JS fundamentals and examples:
-			- `1-BasicOfJS.html` — small HTML page used to run and test snippets.
-			- `2-DataTypeInJS.html` — exercises and examples for JS data types.
-			- `3-OperatorsInJS.html` / `3-BasicPractice.html` — operators and practice problems.
-			- `details.txt` / `Details2.txt` — short notes and observations while learning.
-		- `2-ConditionsInJS/` — conditional statements practice:
-			- `1-BasicofConditionalStatements.html` — basic if/else examples.
-			- `2-PracticeOFCS.html` — practice problems for conditionals.
-		- `README.md` — short guide explaining how to run the exercises and recommended next steps (open files in browser and use DevTools Console).
-- `Fonts/` and `Photos/` — Asset folders used across projects.
+Each folder generally contains an `index.html`, `style.scss` (or `style.css`) and `script.js` where applicable.
 
+## How to preview
+- The simplest way to preview pages is to open the HTML file in your browser (double-click or `File -> Open`).
+- For some browsers and for fetching local fonts/images reliably, run a small local server from the repo root. Example (PowerShell / Command Prompt):
 
-## What’s inside?
-- **HTML Projects:** Basic to advanced HTML pages, including resume websites and creative layouts.
-- **CSS & SCSS:** Styling with CSS and SCSS, including hover effects, custom fonts, and responsive layouts.
-- **3D & Interactive Cards:** Cards with 3D transforms and hover animations using only CSS.
-- **Backgrounds & Media:** Pages with background images and videos, including autoplay video backgrounds.
-- **Responsive Design:** Projects with mobile/tablet-friendly layouts (in progress).
-- **Fonts & Assets:** Use of custom fonts and images for a rich UI experience.
+```powershell
+cd c:\Users\ayush\SheryiansClasses
+python -m http.server 8000
+# then open http://localhost:8000/ in your browser
+```
 
-## About
-This folder is a collection of everything I have learned so far in the Cohort 2.0 batch at Sheryians Coding School. It showcases my progress in web development, from basic HTML to advanced CSS/SCSS and interactive UI effects.
+Or, if you have Node.js installed you can use a static server package (for example `npx serve`).
 
-## Lenis — Smooth Scrolling (4-LenisJS/1-BasicScrolling)
+## Build / SCSS
+- This repo includes `.scss` files but no automated build step by default. If you edit SCSS, compile it to CSS using Sass:
 
-A small demo project that demonstrates using the Lenis smooth-scrolling library to create a simple full-page vertical scroll experience. This was built while learning how to integrate third-party JS packages and wire them into a basic page.
+```
+sass path/to/style.scss path/to/style.css
+```
 
-What’s included:
-- `index.html` — three full-screen sections that scroll vertically.
-- `style.scss` / `style.css` — minimal styles to make each section full height and centered.
-- `script.js` — initializes Lenis and connects it to requestAnimationFrame for smooth scrolling.
+## Notable recent changes
+- Added animated background crossfade and entrance animations to `6-JavaSCriptDOM/10-Change` (season demo).
+- Restored and registered seasonal fonts (Spring, Summer, Autumn, Winter) and added utility classes to apply them.
+- Implemented a smooth `h1` hover glow and animation (accessible to `prefers-reduced-motion`).
+- Fixed `6-JavaSCriptDOM/12-FileUPloadMiniProject/script.js` — corrected `fileinp.click()` typo and added defensive checks.
+- Fixed missing `<script>` tag in `6-JavaSCriptDOM/15-EventBubbling/index.html` so the event bubbling demo works.
 
-How to run:
-1. Open `4-LenisJS/1-BasicScrolling/index.html` in a browser (no build step required).
-2. The demo loads Lenis from a CDN and starts smooth scrolling automatically.
+## Testing quickly
+- Open `6-JavaSCriptDOM/10-Change/index.html` in the browser (or via `http://localhost:8000/6-JavaSCriptDOM/10-Change/`) and select a season to see the background crossfade, fonts, and heading animation.
+- Open `6-JavaSCriptDOM/12-FileUPloadMiniProject/index.html` to test the upload button.
+- Open `6-JavaSCriptDOM/15-EventBubbling/index.html` to test the event bubbling demo (click list items).
 
-Notes / Learnings:
-- Using Lenis for smooth scrolling requires calling `lenis.raf(time)` inside a requestAnimationFrame loop.
-- The demo shows how to keep HTML/CSS simple while adding a small JS library to enhance UX.
+## Commit & Push
+I will commit README updates and push them to `origin/main` when you ask me to. If you prefer a different commit message or branch, tell me and I will use that.
 
-_This is my journey so far!_
+## Next steps / Suggestions
+- Add a small `CONTRIBUTING.md` if others will contribute.
+- Add a `package.json` and a simple `npm` script to compile SCSS automatically if you plan to edit multiple SCSS files frequently.
+- Consider using Git LFS for large binary assets (fonts/images) if you plan to expand the repo.
+
+---
+Generated and updated locally on your workspace.
+
+    --
+
+    ## Repository structure (top-level folders)
+
+    - `1-HTML/` — Basic HTML exercises and references.
+    - `2-SCSS&CSS/` — SCSS/CSS experiments and responsive demos; some files include compiled `style.css` and others provide `style.scss` sources.
+    - `3-AllTask/` — Assorted project pages and demos (resume site, background demos, Swiper carousel, card demos).
+    - `4-LenisJS/` — Demo showing Lenis smooth scrolling integration.
+    - `5-JavaScript/` — Learning exercises and notes (variables, conditions, loops, functions, arrays, objects). Contains expanded `README.md` to navigate exercises.
+    - `6-JavaSCriptDOM/` — Mini DOM projects (counters, notepad, createElement demos, download demo, season-change demo, etc.). This folder contains many small interactive examples used for practice.
+    - `Fonts/` and `Photos/` — Local assets used by multiple demos.
+
+    --
+
+    ## Quick start — previewing demos locally
+
+    Most demos are static HTML and can be viewed directly in a browser. For better results (loads assets and avoids CORS), run a simple static server from the repo root.
+
+    PowerShell example (from `c:\Users\ayush\SheryiansClasses`):
+
+    ```powershell
+    # Python simple server (works if Python is installed)
+    python -m http.server 8000
+
+    # or use a tiny Node static server (npm required)
+    npx http-server . -p 8000
+    ```
+
+    Then open `http://localhost:8000/` and navigate to any demo, for example:
+
+    - `http://localhost:8000/6-JavaSCriptDOM/10-Change/index.html` (season-change demo with background crossfade and animated heading)
+    - `http://localhost:8000/3-AllTask/6-NoonWebsite/index.html` (Swiper carousel demo)
+
+    --
+
+    ## SCSS notes
+
+    - Some pages reference `style.scss` during development. Where a precompiled `style.css` exists, you can open the page directly; otherwise compile SCSS to CSS before previewing.
+
+    PowerShell compile command (requires `sass` or `npx sass`):
+
+    ```powershell
+    npx sass path\to\style.scss path\to\style.css --no-source-map
+    ```
+
+    --
+
+    ## Notable projects (high level)
+
+    - `6-JavaSCriptDOM/10-Change` — Seasonal background demo with crossfade overlays, custom fonts, and an animated `h1` heading. JS toggles utility font classes and adds overlays for smooth background fades.
+    - `6-JavaSCriptDOM/*` — A set of mini-projects used for DOM practice: Counter, NotePad (add/delete/top), Download demo (progress simulation), File upload helpers, etc.
+    - `3-AllTask/6-NoonWebsite` — Swiper carousel with autoplay and responsive breakpoints.
+    - `3-AllTask/7-Card.html` — Card demo with CSS hover effects and JS fallback (uses `:has()` where available).
+
+    --
+
+    ## Fonts & Assets
+
+    - `Fonts/` contains OTF/TTF fonts used in several demos (Rockybilly, Diary Autumn, Hearty Winter, Spring is Coming, etc.).
+    - `Photos/` stores background and hero images used by the demos.
+
+    When adding large video files or other binaries, consider using Git LFS to avoid large repo sizes.
+
+    --
+
+    ## Run & debug tips
+
+    - Use the browser DevTools console to see runtime logs and errors for interactive demos.
+    - If a demo uses `style.scss` directly, compile it to `style.css` and refresh the page.
+    - Many examples are deliberately minimal. If a script appears not to run, ensure the page includes the `<script>` tag and that scripts are loaded after DOM elements (or use DOMContentLoaded).
+
+    --
+
+    ## Contributing / Next tasks
+
+    If you want improvements, I can:
+
+    1. Add a top-level `index.html` that links to each demo for easier browsing.
+    2. Add small README files inside major demo folders describing how to run and what to expect.
+    3. Move large media files to Git LFS and add `.gitattributes`.
+
+    Tell me which item you want and I'll implement, test, and push the change.
+
+    --
+
+    Last updated: 2025-11-24
+
+    ---
+
+    If you want a more detailed, per-folder README (for `5-JavaScript`, `6-JavaSCriptDOM`, or `3-AllTask`), tell me which folder and I'll generate it next.
