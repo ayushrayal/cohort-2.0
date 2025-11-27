@@ -1,3 +1,87 @@
+# cohort-2.0 — Front-end practice projects
+
+This repository contains front-end demos, small practice projects, and experiments created as part of the Sheryians Coding School Cohort 2.0.
+
+Each folder contains a focused mini-project (HTML / CSS / JS). Many projects are intentionally small so you can quickly test, learn, and extend them.
+
+---
+
+## Quick structure overview
+- `1-HTML/` — Basic HTML exercises
+- `2-SCSS&CSS/` — SCSS and CSS experiments
+- `3-AllTask/` — Various challenges and larger demos (resume website, Swiper-based carousel, card & layout demos)
+- `4-LenisJS/` — Lenis smooth scrolling demo
+- `5-JavaScript/` — Notes and walkthrough for JS basics (variables, conditions, loops, functions, arrays, objects)
+- `6-JavaSCriptDOM/` — Mini DOM-focused demos (detailed below)
+- `Fonts/` — Local font files used by demos
+- `Photos/` — Demo images used across the projects
+
+---
+
+## 6-JavaSCriptDOM — Mini projects (detailed)
+This folder is a collection of small DOM practice projects. Each subfolder is an independent demo; open `index.html` or run a small server and navigate to the folder.
+
+- `1-BasicOfDOM/` — (empty scaffolding) A placeholder for basic DOM operations.
+- `2-LightOffOnProject/` — A light bulb toggle demo that switches visual state via a button.
+- `3-Counter/` — Basic increment/decrement counter using DOM updates. Files: `index.html`, `script.js`.
+- `4-RandomThingWithAPI/` — Fetches and displays random images from Picsum; button to fetch new image. Files: `index.html`, `script.js`.
+- `5-QuotesGeneratorWithAPI/` — Uses `https://dummyjson.com/quotes/random` to fetch a random quote and author.
+- `6-NotePad/` — Simple note-taking demo that appends tasks to a list, deletes the last task, and marks top priority.
+- `7-MiniProjectOFCreateElementAndApendChild/` — Random boxes generator that creates elements using `createElement` and `appendChild`.
+- `8-MiniProjectOFCreateElementAndApendChildWithMousemove/` — Variant that spawns elements on mouse move.
+- `9-Download/` — Simulates file download progress with a progress bar and percentage text.
+- `10-Change/` — Seasonal selection demo that crossfades backgrounds, sets decorative fonts, and animates the heading.
+- `11-Keydown/` — Keyboard event demo that shows the pressed key in the heading.
+- `12-FileUPloadMiniProject/` — File chooser demo where the button programmatically triggers the file input.
+- `13-MouseOverAndMouseOut/` — Demonstrates `mouseover`/`mouseout` changes (background color swap).
+- `14-MouseMove/` — Tracks mouse coordinates and moves an element with the cursor.
+- `15-EventBubbling/` — Event bubbling/capturing demo toggling `.important` class on list items when clicked.
+- `16-PianoPlay/` — Small piano UI that programmatically creates key elements on load (keyboard & click handling can be added).
+- `17-CharacterCount/` — Live character count with warning when the maximum (20) is exceeded.
+
+---
+
+## How to preview projects locally
+Most demos are static and can be opened directly in a browser (double-click `index.html`). For better results (especially to load local fonts and to avoid CORS issues), run a local static server:
+
+PowerShell example (from repo root):
+
+```powershell
+cd "c:\Users\ayush\SheryiansClasses"
+python -m http.server 8000
+# open http://localhost:8000/ and navigate to any demo
+```
+
+Or use Node-based static servers (if Node installed):
+
+```powershell
+npx http-server . -p 8000
+# or: npx serve . -p 8000
+```
+
+---
+
+## SCSS / Build notes
+- The repo contains several `style.scss` files for demos. Some projects contain compiled `style.css` files. If you make changes to an `.scss` file, recompile to `style.css` before previewing.
+
+Example using `sass` (NPM or installed):
+
+```powershell
+npx sass path\to\style.scss path\to\style.css --no-source-map
+```
+
+---
+
+## Maintenance & tips
+- Where large media files are used (or in the `Fonts/` folder) you may consider Git LFS to avoid long cloning times.
+- Keep JavaScript modular: use event listeners and classes, avoid global inline styles where possible.
+- Use per-folder README files for larger demos for quicker navigation — I already added `6-JavaSCriptDOM/Rendme.md` as a starting point.
+
+---
+
+If you want, I can add a top-level `index.html` that lists all demos and links to them, or generate per-folder READMEs for more complex projects. Tell me what you'd like next and I'll implement it.
+
+Last updated: 2025-11-27
 # cohort-2.0
 
 This repository contains all the projects and assignments completed during my journey in the Sheryians Coding School, Cohort 2.0 batch.
