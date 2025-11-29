@@ -1,10 +1,15 @@
-````markdown
 # 6-JavaSCriptDOM — Mini projects and exercises
 
 This folder contains a collection of small DOM-focused practice projects and interactive demos. Each mini-project demonstrates a DOM-related concept (event handling, element creation, animation, keyboard/mouse events, and more).
 
 ## Quick Links
+-`1-BasicOfDOM/` — basics of selecting elements and manipulating them
+- `2-LightOffOnProject/` — demonstrates toggling styles or states via DOM
 - `3-Counter/` — simple counter (increment/decrement) example using DOM updates
+- `4-RandomThingWithAPI/` — fetch API usage with DOM updates
+- `5-QuotesGeneratorWithAPI/` — quotes generator using a remote API
+-`7-MiniProjectOFCreateElementAndApendChild/` — creating and appending elements programmatically
+- `8-MiniProjectOFCreateElementAndApendChildWithMousemove/` — a variant that reacts to mouse movement
 - `6-NotePad/` — a simple notepad demo to add/delete/toggle tasks in the DOM
 - `9-Download/` — a download progress simulator using JS to animate progress
 - `10-Change/` — Seasonal demo showing crossfading background overlays, dynamic fonts, and heading animations
@@ -15,12 +20,7 @@ This folder contains a collection of small DOM-focused practice projects and int
 - `15-EventBubbling/` — event bubbling/capturing demo (toggle `important` class on list items)
 - `16-PianoPlay/` — piano keys demo using keyboard or click events to play sounds
 - `17-CharacterCount/` — live character counting and preview
-- `1-BasicOfDOM/` — basics of selecting elements and manipulating them
-- `2-LightOffOnProject/` — demonstrates toggling styles or states via DOM
-- `4-RandomThingWithAPI/` — fetch API usage with DOM updates
-- `5-QuotesGeneratorWithAPI/` — quotes generator using a remote API
-- `7-MiniProjectOFCreateElementAndApendChild/` — creating and appending elements programmatically
-- `8-MiniProjectOFCreateElementAndApendChildWithMousemove/` — a variant that reacts to mouse movement
+
 
 ## How to preview
 All projects are static. You can open any `index.html` directly in the browser, but some fonts/assets load better via a local server. From the workspace root:
@@ -48,5 +48,3 @@ npx sass path\to\style.scss path\to\style.css --no-source-map
 
 ---
 Generated and updated on your workspace.
-
-````

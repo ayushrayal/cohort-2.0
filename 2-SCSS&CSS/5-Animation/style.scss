@@ -20,7 +20,7 @@ main{
     width: 150px;
     border-radius: 20px;
     animation: moveBox 2s infinite alternate ease-in-out;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
 }
 @keyframes moveBox {
     0% {
