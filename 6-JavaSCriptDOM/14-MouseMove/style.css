@@ -12,17 +12,27 @@ body, html {
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   position: relative;
-  background-color: #333;
+  cursor: none;
 }
-body div {
+body .cursor {
+  position: fixed;
   height: 100px;
   width: 100px;
+  border-radius: 50%;
+  z-index: 9;
   background-color: transparent;
-  border: 2px solid beige;
-  border-radius: 50px;
-  position: absolute;
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  border: 1px solid white;
+  transition: all ease 0.2s;
   transform: translate(-50%, -50%);
+}
+body #main1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+}
+body #main2 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(33, 32, 32);
 }/*# sourceMappingURL=style.css.map */
