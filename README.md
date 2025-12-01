@@ -1,5 +1,114 @@
 # cohort-2.0 — Front-end practice projects
 
+This repository contains front-end demos, small practice projects, and experiments created during the Sheryians Coding School — Cohort 2.0. The collection focuses on HTML/CSS/SCSS and interactive JavaScript (DOM) exercises.
+
+---
+
+## Repo structure (top-level)
+- `1-HTML/` — Basic HTML exercises and references.
+- `2-SCSS&CSS/` — SCSS and CSS experiments and demos.
+- `3-AllTask/` — Larger example pages and tasks (resume site, background demos, Swiper carousel, card demos).
+- `4-LenisJS/` — Lenis smooth-scrolling integration demo.
+- `5-JavaScript/` — Notes, exercises and small examples for learning JavaScript.
+- `6-JavaSCriptDOM/` — Mini DOM projects (Counter, Notepad, Create Element demos, Download demo, seasonal-change demo, etc.).
+- `Fonts/` and `Photos/` — Local assets used by demos (fonts, images).
+
+---
+
+## Quick start — previewing demos locally
+Many demos are static and can be opened directly in a browser by double-clicking `index.html`. For reliable file/fetch behavior and loading of local fonts, run a local static server from the repo root:
+
+PowerShell example:
+
+```powershell
+cd "c:\Users\ayush\SheryiansClasses"
+python -m http.server 8000
+# navigate to http://localhost:8000/
+```
+
+If you prefer Node tooling:
+
+```powershell
+npx http-server . -p 8000
+# or: npx serve . -p 8000
+```
+
+---
+
+## SCSS / Build tips
+- The repo contains `style.scss` files used during development. Some demos already include compiled `style.css` files.
+- To compile SCSS to CSS (Sass available via `npx`):
+
+```powershell
+npx sass path\to\style.scss path\to\style.css --no-source-map
+```
+
+---
+
+## 6-JavaSCriptDOM — Mini projects overview
+This folder contains small, independent DOM-focused demos. Each project generally includes `index.html`, `script.js` and either `style.css` or `style.scss`. Select folders of interest and open them in the browser (or via the local server).
+
+Notable folders:
+- `3-Counter` — counter with Increase / Decrease.
+- `6-NotePad` — add/delete/mark priority for notes.
+- `9-Download` — simulated download progress bar.
+- `10-Change` — seasonal background crossfade with custom fonts & animated heading.
+- `12-FileUPloadMiniProject` — button triggers file input.
+- `15-EventBubbling` — toggle `.important` class on a list via delegation.
+- `14-MouseMove` — cursor element follows your mouse; updated to be 100vh and smooth.
+
+---
+
+## Recent updates & fixes
+- Renamed `6-JavaSCriptDOM/Rendme.md` to `6-JavaSCriptDOM/README.md` for better folder visibility.
+- Fixed `12-FileUPloadMiniProject/script.js` (`fileinp.click()` typo) and improved defensive checks.
+- Added crossfade overlays and `h1` animations in `10-Change` demo; added seasonal font utility classes.
+- Implemented a `.cursor` element for `14-MouseMove` with smoother movement via `requestAnimationFrame` (improves performance). The demo is designed to fill the viewport (100vh) and avoids layout thrashing.
+- General: many small fixes to hover states, CSS grouping, SCSS structure, and responsive breakpoints.
+
+---
+
+## How to make pages 100vh (viewport height) reliably
+Some demos use full-viewport layouts. If you want a page to cover 100% of viewport height and avoid scroll, ensure the following in your page’s CSS/SCSS:
+
+```scss
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* set only if you truly intend to block scrolling */
+}
+
+main {
+  min-height: 100vh; /* ensures the element fills viewport height */
+  height: 100vh;     /* exact match to the viewport height */
+}
+
+/* For full-screen backgrounds (optional layering) */
+#background-layer {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+}
+```
+
+Notes:
+- Avoid `overflow: hidden` globally unless you want to disable all scrolling; prefer layout-based fixes, e.g., `min-height: 100vh` for main sections.
+- Use `position: fixed` for background overlays to make sure they cover the full viewport regardless of content.
+
+---
+
+## Contributing / Next steps
+- Want an index page that links to every demo? I can add it to make navigation easier.
+- I can also generate README files for each larger demo (e.g., `10-Change`) describing usage, assets, and behavior.
+
+If you'd like any of those, tell me which item to implement; I’ll update docs, tests, and push the change.
+
+---
+
+Last updated: 2025-12-01
+# cohort-2.0 — Front-end practice projects
+
 This repository contains front-end demos, small practice projects, and experiments created as part of the Sheryians Coding School Cohort 2.0.
 
 Each folder contains a focused mini-project (HTML / CSS / JS). Many projects are intentionally small so you can quickly test, learn, and extend them.
