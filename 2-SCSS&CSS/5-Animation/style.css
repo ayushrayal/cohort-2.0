@@ -32,6 +32,16 @@ main {
     background-color: #ffffff;
     border-radius: 0px;
   }
+  25% {
+    transform: translateX(200px);
+    background-color: #ff0000;
+    border-radius: 75px;
+  }
+  50% {
+    transform: translateX(0);
+    background-color: #ffffff;
+    border-radius: 0px;
+  }
   100% {
     transform: translateX(200px);
     background-color: #ff0000;
