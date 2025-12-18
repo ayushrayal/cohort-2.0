@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@property --r {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+main #box {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  box-shadow: 0 0 0px rgb(255, 0, 123);
+  border-radius: 15px;
+  background: linear-gradient(black) padding-box, conic-gradient(from var(--r), black, rgb(255, 0, 123), black) border-box;
+  border: 0px solid rgba(245, 245, 245, 0);
+  animation: borderAnimate 5s linear infinite;
+  animation-play-state: paused;
+  transition: all 0.3s linear;
+  text-shadow: 0 0 0 rgb(255, 0, 123);
+  color: whitesmoke;
+}
+main #box img {
+  width: 100%;
+}
+main #box:hover {
+  animation-play-state: running;
+  border: 5px solid rgba(245, 245, 245, 0);
+  box-shadow: 0 0 60px rgb(255, 0, 195);
+  color: rgb(255, 0, 123);
+  text-shadow: 0 0 10px rgb(255, 0, 123);
+}
+
+@keyframes borderAnimate {
+  0% {
+    --r: 0deg;
+  }
+  100% {
+    --r: 360deg;
+  }
+}/*# sourceMappingURL=style.css.map */
