@@ -35,9 +35,9 @@ main {
     border: 0px solid rgba(245, 245, 245, 0);
     animation: borderAnimate 5s linear infinite;
     animation-play-state: paused;
-    transition: all 0.3s linear;
     text-shadow: 0 0 0 rgb(255, 0, 123);
     color: whitesmoke;
+    transition: all 0.3s linear;
     img {
       width: 100%;
     }
