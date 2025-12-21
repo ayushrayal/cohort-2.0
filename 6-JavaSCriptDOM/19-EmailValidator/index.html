@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Email & Password Validator</h2>
+
+        <form>
+            <!-- Email -->
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <small class="msg" id="emailMsg"></small>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small class="msg" id="passwordMsg"></small>
+            </div>
+
+            <!-- Password Rules (JS will control these) -->
+            <div class="rules">
+                <p id="length">✔ Minimum 8 characters</p>
+                <p id="upper">✔ At least one uppercase letter</p>
+                <p id="lower">✔ At least one lowercase letter</p>
+                <p id="number">✔ At least one number</p>
+                <p id="special">✔ At least one special character</p>
+            </div>
+
+            <button type="button">Validate</button>
+        </form>
+    </div>
+
+</body>
+</html>
