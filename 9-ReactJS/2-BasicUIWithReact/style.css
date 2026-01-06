@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .navbar {
+  height: 60px;
+  width: 100%;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  align-items: center;
+}
+main .navbar .a {
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .navbar .a:hover {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
